@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\bin\Product.ConfigurableInterp.Client.dll">
+   <Modules>
+    <Module Name="product.configurableinterp.client.dll">
+     <Namespaces>
+      <Namespace Name="Product.ConfigurableInterp.Client.Controllers">
+       <Types>
+        <Type Name="InterpController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DeserializeInterp(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="727">The 'this' parameter (or 'Me' in Visual Basic) of 'InterpController.DeserializeInterp(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FieldTypes(System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="fieldNameIdContainer" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="177">Parameter 'fieldNameIdContainer' of 'InterpController.FieldTypes(string, string, string, string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GeneratePseudocode(System.Collections.Generic.List`1&lt;Product.ConfigurableInterp.Client.Models.InterpJsonData&gt;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="738">The 'this' parameter (or 'Me' in Visual Basic) of 'InterpController.GeneratePseudocode(List&lt;InterpJsonData&gt;)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+            <Message Id="data" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="738">Parameter 'data' of 'InterpController.GeneratePseudocode(List&lt;InterpJsonData&gt;)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InterpSections()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="InterpSections" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="116">Correct the spelling of the unrecognized token 'InterpSections' in the literal '"Got into the InterpSections with: "'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="161">Correct the spelling of the unrecognized token 'InterpSections' in the literal '"InterpSections return value: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SaveNewInterp()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="SaveNewInterp" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="407">Correct the spelling of the unrecognized token 'SaveNewInterp' in the literal '"SaveNewInterp return value = "'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="397">Correct the spelling of the unrecognized token 'SaveNewInterp' in the literal '"SaveNewInterp with: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ViewPseudocode(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Pseudocode" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="486">Correct the spelling of 'Pseudocode' in member name 'InterpController.ViewPseudocode(string, string)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="responseMessage" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Controllers" File="InterpController.cs" Line="487">'InterpController.ViewPseudocode(string, string)' declares a variable, 'responseMessage', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Product.ConfigurableInterp.Client.Models">
+       <Types>
+        <Type Name="Condition" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AlphaParametersList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="Condition.cs" Line="61">Change 'Condition.AlphaParametersList' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="Condition.cs" Line="61">Change 'List&lt;AlphaParameters&gt;' in 'Condition.AlphaParametersList' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DecimalParametersList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="Condition.cs" Line="66">Change 'Condition.DecimalParametersList' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="Condition.cs" Line="66">Change 'List&lt;DecimalParameters&gt;' in 'Condition.DecimalParametersList' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NumericParametersList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="Condition.cs" Line="71">Change 'Condition.NumericParametersList' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="Condition.cs" Line="71">Change 'List&lt;NumericParameters&gt;' in 'Condition.NumericParametersList' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ConditionType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#op_Implicit(Product.ConfigurableInterp.Client.Models.ConditionType):System.String" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Name="NoAllowedExceptions" Certainty="90" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="ConditionType.cs" Line="33">'ConditionType.implicit operator string(ConditionType)' creates an exception of type 'NotImplementedException'. Exceptions should not be raised in this type of method. If this exception instance might be raised, change this method's logic so it no longer raises an exception.</Issue>
+            </Message>
+            <Message Id="v" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="ConditionType.cs" Line="32">In method 'ConditionType.implicit operator string(ConditionType)', consider providing a more meaningful name than parameter name 'v'.</Issue>
+            </Message>
+            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="NonBreaking">
+             <Issue Name="Multiple" Certainty="50" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="ConditionType.cs" Line="32">Provide a method named 'ToXXX' or 'FromXXX' as an alternate for operator 'ConditionType.implicit operator string(ConditionType)'.</Issue>
+            </Message>
+            <Message Id="v" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="ConditionType.cs" Line="32">Parameter 'v' of 'ConditionType.implicit operator string(ConditionType)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Interp" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#SetSections(Product.ConfigurableInterp.Client.Models.InterpSections)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="Interp.cs" Line="297">In externally visible method 'Interp.SetSections(InterpSections)', validate parameter 'sections' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="InterpSections" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BuildSections(Product.ConfigurableInterp.Client.ServiceCode.InterpClientData,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="InterpSections.cs" Line="131">In externally visible method 'InterpSections.BuildSections(InterpClientData, bool)', validate parameter 'client' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="JsonConditionStep" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Actions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="InterpJsonData.cs" Line="150">Change 'JsonConditionStep.Actions' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="InterpJsonData.cs" Line="150">Change 'List&lt;JsonActionStep&gt;' in 'JsonConditionStep.Actions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Conditions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="InterpJsonData.cs" Line="145">Change 'JsonConditionStep.Conditions' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="InterpJsonData.cs" Line="145">Change 'List&lt;JsonCondition&gt;' in 'JsonConditionStep.Conditions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Membership" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="BlueBridge" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\Models" File="Membership.cs" Line="35">Correct the spelling of the unrecognized token 'BlueBridge' in the literal '"#### Did not receive a user object back from BlueBridge, using temporary ID. ###..."'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Product.ConfigurableInterp.Client.ServiceCode">
+       <Types>
+        <Type Name="CriInterpClientData" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateNewActions(Product.ConfigurableInterp.Client.Models.Interp)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="CriInterpClientData.cs" Line="450">In externally visible method 'CriInterpClientData.CreateNewActions(Interp)', validate parameter 'interp' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateNewConditions(Product.ConfigurableInterp.Client.Models.Interp)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="CriInterpClientData.cs" Line="471">In externally visible method 'CriInterpClientData.CreateNewConditions(Interp)', validate parameter 'interp' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="InterpClientData" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="Warning">'InterpClientData' is coupled with 81 different types from 14 different namespaces. Rewrite or refactor this class's methods to decrease its class coupling, or consider moving some of the class's methods to some of the other types it is tightly coupled with. A class coupling above 95 indicates poor maintainability, a class coupling between 95 and 80 indicates moderate maintainability, and a class coupling below 80 indicates good maintainability.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#CategoryDescription(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetCategoryDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="606">Correct the spelling of the unrecognized token 'GetCategoryDescription' in the literal '"GetCategoryDescription response: "'.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="590">In externally visible method 'InterpClientData.CategoryDescription(string, string)', validate parameter 'categoryNumber' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActionParameterDescriptionValidationInfo(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionParameterDescriptionValidationInfo" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="451">Correct the spelling of the unrecognized token 'GetActionParameterDescriptionValidationInfo' in the literal '"GetActionParameterDescriptionValidationInfo response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActions(System.Int32,ConfigInterp.Contracts.DataContracts.LineOfBusiness)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="359">Correct the spelling of the unrecognized token 'GetActionDescription' in the literal '"GetActionDescription response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActionTypes(ConfigInterp.Contracts.DataContracts.LineOfBusiness)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionTypeDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="389">Correct the spelling of the unrecognized token 'GetActionTypeDescription' in the literal '"GetActionTypeDescription response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCompareTypes(System.Int32,ConfigInterp.Contracts.DataContracts.LineOfBusiness)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetCompareTypeDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="295">Correct the spelling of the unrecognized token 'GetCompareTypeDescription' in the literal '"GetCompareTypeDescription response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetConditionTypes" Kind="Property" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_GetConditionTypes()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="GetConditionTypeDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+               <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="84">Correct the spelling of the unrecognized token 'GetConditionTypeDescription' in the literal '"GetConditionTypeDescription response: "'.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#GetExceptionTypes" Kind="Property" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_GetExceptionTypes()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="GetExceptionDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+               <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="148">Correct the spelling of the unrecognized token 'GetExceptionDescription' in the literal '"GetExceptionDescription response: "'.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#GetFieldnames(System.Int32,ConfigInterp.Contracts.DataContracts.LineOfBusiness)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetFieldNameDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="327">Correct the spelling of the unrecognized token 'GetFieldNameDescription' in the literal '"GetFieldNameDescription response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFieldTypes" Kind="Property" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_GetFieldTypes()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message Id="GetFieldTypeDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+               <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="116">Correct the spelling of the unrecognized token 'GetFieldTypeDescription' in the literal '"GetFieldTypeDescription response: "'.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#GetFieldValidationInfo(System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetFieldValidationInfo" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="421">Correct the spelling of the unrecognized token 'GetFieldValidationInfo' in the literal '"GetFieldValidationInfo response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetInterpHeader(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetInterpHeader" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="779">Correct the spelling of the unrecognized token 'GetInterpHeader' in the literal '"GetInterpHeader:InquireInterpNarrative response: "'.</Issue>
+            </Message>
+            <Message Id="InquireInterpNarrative" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="779">Correct the spelling of the unrecognized token 'InquireInterpNarrative' in the literal '"GetInterpHeader:InquireInterpNarrative response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetInterpSection(System.String,Product.ConfigurableInterp.Client.ServiceCode.InterpIdSection,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="482">In externally visible method 'InterpClientData.GetInterpSection(string, InterpIdSection, bool)', validate parameter 'interpId' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OutlineDescription(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetOutlineDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="556">Correct the spelling of the unrecognized token 'GetOutlineDescription' in the literal '"GetOutlineDescription response: "'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="541">In externally visible method 'InterpClientData.OutlineDescription(string)', validate parameter 'outlineNumber' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SaveNewInterp(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="CreateInterpNarrative" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="719">Correct the spelling of the unrecognized token 'CreateInterpNarrative' in the literal '"CreateInterpNarrative response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SubcategoryDescription(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetSubCategoryDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="659">Correct the spelling of the unrecognized token 'GetSubCategoryDescription' in the literal '"GetSubCategoryDescription response: "'.</Issue>
+            </Message>
+            <Message Id="2" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="641">In externally visible method 'InterpClientData.SubcategoryDescription(string, string, string)', validate parameter 'subcategoryNumber' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateInterpConfig(System.String,System.Collections.Generic.List`1&lt;Product.ConfigurableInterp.Client.Models.InterpJsonData&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="873">Change 'List&lt;InterpJsonData&gt;' in 'InterpClientData.UpdateInterpConfig(string, List&lt;InterpJsonData&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateInterpNarrative(System.String,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="949">Change 'List&lt;string&gt;' in 'InterpClientData.UpdateInterpNarrative(string, List&lt;string&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="954">In externally visible method 'InterpClientData.UpdateInterpNarrative(string, List&lt;string&gt;)', validate parameter 'lineData' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerifyInterp(System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="InquireInterpNarrative" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="1398">Correct the spelling of the unrecognized token 'InquireInterpNarrative' in the literal '"VerifyInterp:InquireInterpNarrative Response: "'.</Issue>
+            </Message>
+            <Message Id="VerifyInterp" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpClientData.cs" Line="1398">Correct the spelling of the unrecognized token 'VerifyInterp' in the literal '"VerifyInterp:InquireInterpNarrative Response: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="InterpServiceClient" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CloneInterp(CloneInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="CloneInterp" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="301">Correct the spelling of the unrecognized token 'CloneInterp' in the literal '"CloneInterp Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CloneInterpAsync(CloneInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="CloneInterpAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="312">Correct the spelling of the unrecognized token 'CloneInterpAsync' in the literal '"CloneInterpAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateInterpNarrative(CreateInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="CreateInterpNarrative" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="81">Correct the spelling of the unrecognized token 'CreateInterpNarrative' in the literal '"CreateInterpNarrative Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateInterpNarrativeAsync(CreateInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="CreateInterpNarrativeAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="323">Correct the spelling of the unrecognized token 'CreateInterpNarrativeAsync' in the literal '"CreateInterpNarrativeAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteInterp(DeleteCipInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="DeleteInterp" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="334">Correct the spelling of the unrecognized token 'DeleteInterp' in the literal '"DeleteInterp Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteInterpAsync(DeleteCipInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="DeleteInterpAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="345">Correct the spelling of the unrecognized token 'DeleteInterpAsync' in the literal '"DeleteInterpAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActionDescription(ListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="92">Correct the spelling of the unrecognized token 'GetActionDescription' in the literal '"GetActionDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActionDescriptionAsync(ListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="356">Correct the spelling of the unrecognized token 'GetActionDescriptionAsync' in the literal '"GetActionDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActionParameterDescriptionValidationInfo(ListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionParameterDescriptionValidationInfo" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="103">Correct the spelling of the unrecognized token 'GetActionParameterDescriptionValidationInfo' in the literal '"GetActionParameterDescriptionValidationInfo Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActionParameterDescriptionValidationInfoAsync(ListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionParameterDescriptionValidationInfoAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="367">Correct the spelling of the unrecognized token 'GetActionParameterDescriptionValidationInfoAsync' in the literal '"GetActionParameterDescriptionValidationInfoAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActionTypeDescription(SystemTypeRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionTypeDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="114">Correct the spelling of the unrecognized token 'GetActionTypeDescription' in the literal '"GetActionTypeDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetActionTypeDescriptionAsync(SystemTypeRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetActionTypeDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="378">Correct the spelling of the unrecognized token 'GetActionTypeDescriptionAsync' in the literal '"GetActionTypeDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAvailableOutlineCategory(OutlineCategoryListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetAvailableOutlineCategory" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="125">Correct the spelling of the unrecognized token 'GetAvailableOutlineCategory' in the literal '"GetAvailableOutlineCategory Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAvailableOutlineCategoryAsync(OutlineCategoryListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetAvailableOutlineCategoryAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="389">Correct the spelling of the unrecognized token 'GetAvailableOutlineCategoryAsync' in the literal '"GetAvailableOutlineCategoryAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCategoryDescription(CategoryRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetCategoryDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="136">Correct the spelling of the unrecognized token 'GetCategoryDescription' in the literal '"GetCategoryDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCategoryDescriptionAsync(CategoryRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetCategoryDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="400">Correct the spelling of the unrecognized token 'GetCategoryDescriptionAsync' in the literal '"GetCategoryDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCompareTypeDescription(ListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetCompareTypeDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="147">Correct the spelling of the unrecognized token 'GetCompareTypeDescription' in the literal '"GetCompareTypeDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCompareTypeDescriptionAsync(ListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetCompareTypeDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="411">Correct the spelling of the unrecognized token 'GetCompareTypeDescriptionAsync' in the literal '"GetCompareTypeDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetConditionTypeDescription(DefaultRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetConditionTypeDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="158">Correct the spelling of the unrecognized token 'GetConditionTypeDescription' in the literal '"GetConditionTypeDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetConditionTypeDescriptionAsync(DefaultRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetConditionTypeDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="422">Correct the spelling of the unrecognized token 'GetConditionTypeDescriptionAsync' in the literal '"GetConditionTypeDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetExceptionDescription(SystemTypeRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetExceptionDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="169">Correct the spelling of the unrecognized token 'GetExceptionDescription' in the literal '"GetExceptionDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetExceptionDescriptionAsync(SystemTypeRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetExceptionDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="433">Correct the spelling of the unrecognized token 'GetExceptionDescriptionAsync' in the literal '"GetExceptionDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFieldNameDescription(ListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetFieldNameDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="180">Correct the spelling of the unrecognized token 'GetFieldNameDescription' in the literal '"GetFieldNameDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFieldNameDescriptionAsync(ListRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetFieldNameDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="444">Correct the spelling of the unrecognized token 'GetFieldNameDescriptionAsync' in the literal '"GetFieldNameDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFieldTypeDescription(SystemTypeRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetFieldTypeDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="191">Correct the spelling of the unrecognized token 'GetFieldTypeDescription' in the literal '"GetFieldTypeDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFieldTypeDescriptionAsync(SystemTypeRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetFieldTypeDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="455">Correct the spelling of the unrecognized token 'GetFieldTypeDescriptionAsync' in the literal '"GetFieldTypeDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFieldValidationInfo(FieldValidationInfoRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetFieldValidationInfo" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="202">Correct the spelling of the unrecognized token 'GetFieldValidationInfo' in the literal '"GetFieldValidationInfo Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFieldValidationInfoAsync(FieldValidationInfoRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetFieldValidationInfoAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="466">Correct the spelling of the unrecognized token 'GetFieldValidationInfoAsync' in the literal '"GetFieldValidationInfoAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetInterp(InquireRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetInterp" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="213">Correct the spelling of the unrecognized token 'GetInterp' in the literal '"GetInterp Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetInterpAsync(InquireRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetInterpAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="477">Correct the spelling of the unrecognized token 'GetInterpAsync' in the literal '"GetInterpAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetInterpDetail(InquireRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetInterpDetail" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="224">Correct the spelling of the unrecognized token 'GetInterpDetail' in the literal '"GetInterpDetail Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetInterpDetailAsync(InquireRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetInterpDetailAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="488">Correct the spelling of the unrecognized token 'GetInterpDetailAsync' in the literal '"GetInterpDetailAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetLevelDescription(LevelRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetLevelDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="235">Correct the spelling of the unrecognized token 'GetLevelDescription' in the literal '"GetLevelDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetLevelDescriptionAsync(LevelRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetLevelDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="499">Correct the spelling of the unrecognized token 'GetLevelDescriptionAsync' in the literal '"GetLevelDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetOutlineDescription(OutlineRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetOutlineDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="246">Correct the spelling of the unrecognized token 'GetOutlineDescription' in the literal '"GetOutlineDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetOutlineDescriptionAsync(OutlineRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetOutlineDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="510">Correct the spelling of the unrecognized token 'GetOutlineDescriptionAsync' in the literal '"GetOutlineDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSubCategoryDescription(SubCategoryRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetSubCategoryDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="257">Correct the spelling of the unrecognized token 'GetSubCategoryDescription' in the literal '"GetSubCategoryDescription Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSubCategoryDescriptionAsync(SubCategoryRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="GetSubCategoryDescriptionAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="521">Correct the spelling of the unrecognized token 'GetSubCategoryDescriptionAsync' in the literal '"GetSubCategoryDescriptionAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InquireInterpNarrative(InquireInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="InquireInterpNarrative" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="268">Correct the spelling of the unrecognized token 'InquireInterpNarrative' in the literal '"InquireInterpNarrative Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InquireInterpNarrativeAsync(InquireInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="InquireInterpNarrativeAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="532">Correct the spelling of the unrecognized token 'InquireInterpNarrativeAsync' in the literal '"InquireInterpNarrativeAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateInterpConfig(UpdateInterpDetailRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="UpdateInterpConfig" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="279">Correct the spelling of the unrecognized token 'UpdateInterpConfig' in the literal '"UpdateInterpConfig Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateInterpConfigAsync(UpdateInterpDetailRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="UpdateInterpConfigAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="543">Correct the spelling of the unrecognized token 'UpdateInterpConfigAsync' in the literal '"UpdateInterpConfigAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateInterpNarrative(UpdateInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="UpdateInterpNarrative" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="290">Correct the spelling of the unrecognized token 'UpdateInterpNarrative' in the literal '"UpdateInterpNarrative Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateInterpNarrativeAsync(UpdateInterpRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="UpdateInterpNarrativeAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="554">Correct the spelling of the unrecognized token 'UpdateInterpNarrativeAsync' in the literal '"UpdateInterpNarrativeAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateInterpStatus(StatusChangeRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="UpdateInterpStatus" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="565">Correct the spelling of the unrecognized token 'UpdateInterpStatus' in the literal '"UpdateInterpStatus Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateInterpStatusAsync(StatusChangeRequest)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="UpdateInterpStatusAsync" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2017-02-14 22:02:16Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\tfs_Worksapce\_Net\CL\Prod\CIP\DevBranches\Development\Product.ConfigurableInterp.Client\ServiceCode" File="InterpServiceClient.cs" Line="576">Correct the spelling of the unrecognized token 'UpdateInterpStatusAsync' in the literal '"UpdateInterpStatusAsync Request: "'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506">
+   <Name>Avoid excessive class coupling</Name>
+   <Description>Types and methods with a high degree of class coupling can be difficult to maintain.</Description>
+   <Resolution Name="Type">{0} is coupled with {1} different types from {2} different namespaces. Rewrite or refactor this class's methods to decrease its class coupling, or consider moving some of the class's methods to some of the other types it is tightly coupled with. A class coupling above {3} indicates poor maintainability, a class coupling between {3} and {4} indicates moderate maintainability, and a class coupling below {4} indicates good maintainability.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb397994.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Collection properties should be read only</Name>
+   <Description>Properties that return collections should be read-only so that users cannot entirely replace the backing store. Users can still modify the contents of the collection by calling relevant methods on the collection. Note that the XmlSerializer class has special support for deserializing read-only collections. See the XmlSerializer overview for more information.</Description>
+   <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182327.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065">
+   <Name>Do not raise exceptions in unexpected locations</Name>
+   <Description>Do not explicitly raise exceptions from unexpected locations. There are some methods, such as Equals and GetHashCode, which users do not expect to raise exceptions. Therefore calls to these methods are not commonly wrapped in try catch blocks.</Description>
+   <Resolution Name="NoAllowedExceptions">{0} creates an exception of type {1}. Exceptions should not be raised in this type of method. If this exception instance might be raised, change this method's logic so it no longer raises an exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386039.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error, Warning</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameterMoreMeaningfulName">In method {0}, consider providing a more meaningful name than parameter name {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204">
+   <Name>Literals should be spelled correctly</Name>
+   <Description>This rule parses the literal string into words, tokenizing compound words, and checks the spelling of each word/token.</Description>
+   <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/bb264488.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225">
+   <Name>Operator overloads have named alternates</Name>
+   <Description>When redefining operators, implement named methods to provide access to the operator functionality from languages that do not support operator overloading. For example, the functionality of the '+' operator should also be accessible using an 'Add' method.</Description>
+   <Resolution Name="Multiple">Provide a method named '{0}' or '{1}' as an alternate for operator {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182355.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remove unused locals</Name>
+   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
+   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

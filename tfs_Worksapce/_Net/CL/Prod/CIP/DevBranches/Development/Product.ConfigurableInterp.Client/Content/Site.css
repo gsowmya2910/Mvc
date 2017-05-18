@@ -1,0 +1,336 @@
+﻿/*Font Specs*/
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1;
+    color: black;
+}
+
+.Header, h1 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size : 46px;     
+    font-weight : lighter;
+}
+
+.Subheader, h2 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size : 34px;  
+    font-weight : lighter;   
+}
+
+.Title, h3 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size : 24px; 
+    font-weight : lighter;    
+}
+
+.Subtitle, h4 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size : 20px;  
+    font-weight : normal;      
+    line-height: 24px;
+}
+
+.Base {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size : 15px;
+    font-weight : bold;
+}
+
+.Body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size : 15px;
+    font-weight : normal;
+}
+
+.Caption {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size : 12px;
+    font-weight : normal;
+}
+
+.Bold,
+.FormLabel.Bold {
+    font-weight: bold;
+}
+
+/*Form Inputs and Buttons*/
+.FormField {
+   margin: 8px;
+   margin-left:0;
+}
+
+.FormLabel, label {
+    display:block;
+    font-weight: normal;
+}
+
+
+.FormInput:focus {
+    border: 2px solid #0079C2 !important;
+}
+
+.FormInputSize {
+    height: 32px;
+    line-height: 28px;
+}
+
+ .Combobox, .FormInput {
+    height: 32px;
+    line-height: 28px;
+    min-width: 210px;
+    background-color: white;
+    border: 2px solid #7A7B7B !important;
+    padding: 0 4px;
+}
+
+.FormField select {
+    background-color: white;
+    padding-left: 8px !important;
+    /*padding-right: 8px !important;*/
+    border: 2px solid #7A7B7B !important;
+}
+
+.FormField .InvalidField,
+.FormField.InvalidField {
+    border: 2px solid #d13438 !important;
+
+}
+
+
+ .FormField select option {
+    padding:0 8px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+
+
+ select:focus::-ms-value {
+  background: white;
+  background-color: #F2F2F2;
+}
+
+/*.FormField select option:hover,
+.FormField select option:active {
+    background-color: #0079C2 !important;
+    color:white !important;
+}*/
+
+.FormField input:focus,
+.FormField select:focus {
+    border: 2px solid #0079C2;
+}
+
+/*.FormField select option {
+    background-color: #F2F2F2;
+    border: none;
+}
+    */
+select::-ms-expand {
+    background-color:white;
+    border:none;
+}
+
+.PrimaryButton, .SecondaryButton{
+    height: 32px;
+    padding: 6px 20px;
+    margin:8px;
+    border: 2px solid transparent;
+    color: white;
+    background-color: #0079c2;
+    line-height: 1;
+    text-decoration:none;
+}
+
+.PrimaryButton:hover {
+    border: 2px solid #00395B;
+    text-decoration:none;
+}
+
+.PrimaryButton:focus {
+    background-color: #005B92;
+    text-decoration:none;
+}
+
+.SecondaryButton {
+    background-color: #CCCCCC;
+    color:black;
+}
+
+.SecondaryButton:hover {
+    border: 2px solid #6B6B6B;
+    text-decoration:none;
+    color:black;
+}
+
+.SecondaryButton:focus {
+    background-color:#9A9A9A;
+    text-decoration:none;
+    color:black;
+}
+
+.PrimaryButton:disabled, .SecondaryButton:disabled {
+    background-color:#CCCCCD;
+    color: rgba(0,0,0,.38);
+    border: 2px solid #CCCCCD;
+}
+
+/*Generic Classes*/
+.opacity-60{
+    opacity: 0.6;
+}
+
+.margin-8 {
+    margin:8px;
+}
+
+.spacer-8{
+    height: 8px;
+    width: 8px;
+    display:inline-block;
+}
+
+.spacer-16{
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+}
+
+.float-right{
+    float:right;
+}
+
+.float-left{
+    float:left;
+}
+
+.inline-block {
+    display:inline-block;
+}
+
+/*Spacing Specs*/
+.container {
+    /*margin-left:0;*/
+    max-width: 1400px !important;
+}
+
+.body-content {
+    margin-top:77px;
+    padding-left: 16px;
+}
+
+/*Header*/
+.navbar {
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.12), 0 4px 4px 0 rgba(0,0,0,.24);
+    background-color: white;
+    z-index: 1130;
+    min-height:55px;
+}
+.navbar-inverse {
+    background-color: #0079c2;
+    min-height: 56px;
+    border-color: transparent;
+    z-index: 1030;
+}
+
+.navbar-inverse .navbar-brand{
+    color: white;
+}
+
+.navbar-brand {
+    padding:16px;
+}
+
+.navbar-link {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.secondHeader {
+    margin-top:55px;
+}
+
+.divider {
+    width: 2px;
+    height: 24px;
+    border: solid 1px black;
+    margin:16px 16px 0 0;
+    display:inline-block;
+}
+
+
+.navbar .FormField {
+    margin-top:11px;
+}
+.HeaderButtons {
+    margin-top:3px;
+}
+
+/*Modal Dialog*/
+
+.modal {
+    background-color: rgba(255,255,255,.8);
+}
+
+.modal-content {
+  background-color: #f2f2f2;
+  border: 1px solid #0079C2;
+  border-radius: 0 !important;
+  outline: none;
+  box-shadow: 0 0 24px 0, rgba(0, 0, 0, 0.12), 0 24px 24px 0, rgba(0, 0, 0, 0.24);
+  padding:16px;
+}
+
+/*Tables*/
+.TableSummary td:first-of-type{
+    font-weight:bold;
+    text-align:right;
+    padding-right:8px;
+}
+
+/*Images/icons*/
+.StatusIcon {
+    height:14px;
+    width:14px;
+    margin:-2px -5px 0px 1px;
+}
+
+.StatusIcon.Spinner {
+    width:80px;
+    height:4px;
+}
+
+.modal-spinner {
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index:1230;
+    width:100%;
+    height:100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.modal-spinner img {
+    position:fixed;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/*Steps*/
+.StepPlaceholder {
+    border:2px dashed rgba(2, 2, 2, .38); 
+    color: rgba(2, 2, 2, .38);
+    text-align:center; 
+    font-weight:bold;
+    padding:8px;
+    margin: 8px;
+}

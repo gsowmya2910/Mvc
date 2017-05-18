@@ -1,0 +1,83 @@
+﻿@using System.Text.RegularExpressions;
+@model Interp
+
+@{
+    ViewBag.Title = "Interp Details";
+}
+
+<div class="navbar navbar-fixed-top secondHeader">
+    <div class="container">
+        <div class="navbar-header">
+
+            <div class="FormField inline-block Body">
+                @Html.LabelFor(x => x.InterpId, new { @class = " FormLabel Bold" })
+                @Html.DisplayTextFor(x => x.InterpId)
+            </div>
+            <div class="spacer-8"></div>
+            <div class="FormField inline-block Body">
+                @Html.LabelFor(x => x.Status, new { @class = " FormLabel Bold" })
+                @Html.DisplayTextFor(x => x.Status)
+            </div>
+        </div>
+
+        <div class="float-right HeaderButtons">
+            <div class="col-sm-12 text-left">
+                <br />
+                @{
+                    int cleaned = Regex.Replace(HttpContext.Current.User.Identity.Name, "[^0-9]", string.Empty).ToInt32();
+                    bool sameUser = cleaned == Model.UserId ? true : false;
+                    bool draftStatus = string.IsNullOrEmpty(Model.Status) ? false : Model.Status.Contains("Draft") ? true : false;
+                    bool testStatus = string.IsNullOrEmpty(Model.Status) ? false : Model.Status == "Test" ? true : false;
+                    string encodeInterpId = Json.Encode(Model.InterpId);
+                }
+
+                @if (draftStatus && sameUser)
+                {
+                    <a id="lnkViewInterp_Delete" href="#deleteInterpModal" style="text-decoration: underline;" title="Delete Interp" data-toggle="modal">Delete</a>
+                    @:&nbsp;
+                    }
+                <a id="lnkViewInterp_Pseudocode" href="#" style="text-decoration: underline;" onclick="openPseudo(@encodeInterpId);">Preview Pseudocode</a>
+                &nbsp;
+
+                @//if (draftStatus && sameUser)
+                    //{
+                    //    if (Model.Actions.Count > 0 || Model.Conditions.Count > 0 || Model.Exceptions.Count > 0)
+                    //    {
+                        only show the 'Send to Testing' button if there is at least 1 configured step
+                        <a id="updateInterpStatusModalButton" href="#updateInterpStatusModal" data-toggle="modal" data-interp-status="Test" class="SecondaryButton" onclick="setTargetStatusMsg(this);">Send to Testing</a>
+                    //}
+
+                    <a href="#" id="btnViewInterp_Edit" class="PrimaryButton" onclick="editClick(@encodeInterpId);">Edit</a>
+                }
+               
+                @if (testStatus && sameUser)
+                {
+                    <a id="updateInterpStatusModalButton" href="#updateInterpStatusModal" data-toggle="modal" data-interp-status="Draft" class="SecondaryButton" onclick="setTargetStatusMsg(this);">Revert to Draft</a>
+                    <a id="updateInterpStatusModalButton" href="#updateInterpStatusModal" data-toggle="modal" data-interp-status="Active" class="SecondaryButton" onclick="setTargetStatusMsg(this);">Make Active</a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteInterpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                @Html.Partial("~/Views/Interp/_DeleteInterp.cshtml", Model)
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="updateInterpStatusModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                @Html.Partial("~/Views/Interp/_UpdateInterpStatus.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("~/Views/Interp/_InterpHeaderSection.cshtml", Model)
+}
+

@@ -1,0 +1,17 @@
+﻿@{
+    var fieldTypeList = new List<SelectListItem>();
+
+    fieldTypeList = ViewBag.FieldTypeList;
+
+    string CompareToValues = ViewBag.CompareToValues;
+
+    string CompareToValueInputId = ViewBag.ElementId;
+
+    string CompareIdContainer = ViewBag.ContainerId;
+
+    string CompareDropDownId = ViewBag.CompareDropDown;
+
+    }
+
+
+    @Html.DropDownList("FieldName", fieldTypeList, string.Empty, new { @onchange = "fieldNameChange(" + "this" + ",'" + CompareIdContainer + "','" + CompareToValueInputId + "','" + CompareDropDownId +"'" + ")", @class = "slctComboBox" })

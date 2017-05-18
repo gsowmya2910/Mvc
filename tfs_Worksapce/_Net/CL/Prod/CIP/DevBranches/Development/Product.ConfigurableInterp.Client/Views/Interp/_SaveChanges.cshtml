@@ -1,0 +1,34 @@
+﻿@model Interp
+
+<div class="container InterpBody">
+    @*    <input type="hidden" id="newInterpStatus" value="" />*@
+    <div class="row">
+        <div class="col-xs-12">
+            @Html.Label("Exiting Edit Mode", new { @class = "Subtitle" })
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12">
+            Do you want to save your changes before exiting edit mode?
+        </div>
+    </div>
+    <br />
+    <div class="row hidden" id="saveChangesErrorRow">
+        <div class="col-xs-12">
+            <img id="imgSaveChanges" src="~/Images/invalid@2x.png" />
+            &nbsp;
+            <span id="saveChangesMessage"></span>
+            <br /><br />
+        </div>
+    </div>
+
+    <div style="text-align:right">
+        <div>
+            <button class="SecondaryButton" id="btnCancelEditInterpDone" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button class="SecondaryButton" id="btnDiscardEditInterpDone" onclick="dismissClick(@Json.Encode(Model.InterpId));" aria-hidden="true">Discard Changes</button>
+            <button class="PrimaryButton" id="btnEditInterpDone" onclick="saveClick(@Json.Encode(Model.InterpId), 1);">Save and Exit</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model Interp
+
+<div class="container InterpBody">
+    <input type="hidden" id="newInterpStatus" value="" />
+    <div class="row">
+        <div class="col-xs-12">
+            @Html.Label("Update Interp Status", new { @class = "Subtitle" })
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12">
+            Are you sure you want to <span id="targetStatusAction"></span>?
+        </div>
+    </div>
+    <br />
+    <div class="row hidden" id="updateInterpStatusErrorRow">
+        <div class="col-xs-12">
+            <img id="imgUpdateInterpStatus" src="~/Images/invalid@2x.png" />
+            &nbsp;
+            <span id="updateInterpStatusMessage"></span>
+            <br /><br />
+        </div>
+    </div>
+
+    <div style="text-align:right">
+        <div>
+            <button class="SecondaryButton" id="btnCancelUpdateInterpStatus" onclick="clearStatus();" aria-hidden="true">Cancel</button>
+            <button class="PrimaryButton" id="btnUpdateInterpStatus" onclick="updateInterpStatus(@Json.Encode(Model.InterpId), '@Model.Status');">Update Status</button>
+        </div>
+    </div>
+</div>

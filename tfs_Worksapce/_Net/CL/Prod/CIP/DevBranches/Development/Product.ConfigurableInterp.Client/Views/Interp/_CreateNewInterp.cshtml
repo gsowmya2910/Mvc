@@ -1,0 +1,82 @@
+﻿@model NewInterpModel
+
+<div class="container InterpBody">
+    <div class="row">
+        <div class="col-xs-12">
+            @Html.Label("Create New Interp", new { @class = "Subtitle" })
+        </div>
+    </div>
+    <form method="get" action="@Url.Action("InterpSections")">
+        <div class="row">
+            <div class="col-xs-12">
+                @Html.LabelFor(x => Model.InterpId, new { @class = "Body FormLabel" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-left col-sm-5">
+                @Html.TextBoxFor(x => Model.InterpId, new { @class = "Body FormField FormInput" })
+            </div>
+      
+            <div class="text-left col-sm-4">
+                <div class="FormField FormInputSize">
+                    <img id="imgNewInterp" />
+                    &nbsp;
+                    <span id="InterpMessage" class="Base_SemiBold"></span>
+                </div>
+            </div>
+            <div class="text-left col-sm-3">
+                <div class="FormField FormInputSize">
+                    <a id="viewInterp" href="#" style="text-decoration: underline;">View Interp</a>
+                </div>
+            </div>
+    </form>
+    <br />
+
+    <div class="row">
+        <div class="col-xs-3 text-right">
+            @Html.LabelFor(x => Model.OutlineNumber, new { @class = "Caption Bold FormLabel" })
+        </div>
+        <div class="col-xs-9 Caption" id="dvOutline">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 text-right">
+            @Html.LabelFor(x => Model.CategoryNumber, new { @class = "Caption Bold FormLabel" })
+        </div>
+        <div class="col-xs-9 Caption" id="dvCategory">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 text-right">
+            @Html.LabelFor(x => Model.SubcategoryNumber, new { @class = "Caption Bold FormLabel" })
+        </div>
+        <div class="col-xs-9 Caption" id="dvSubCategory">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 text-right">
+            @Html.LabelFor(x => Model.InterpIdNumber, new { @class = "Caption Bold FormLabel" })
+        </div>
+        <div class="col-xs-9 Caption" id="dvInterpId">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 text-right">
+            @Html.LabelFor(x => Model.LevelDescription, new { @class = "Caption Bold FormLabel" })
+        </div>
+        <div class="col-xs-9 Caption" id="dvNewInterpLevel">
+
+        </div>
+    </div>
+
+    <div style="text-align:right">
+        <div>
+            <button class="SecondaryButton" id="btnCancelNewIntrep" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button class="PrimaryButton" id="btnCreateNewIntrep">Create</button>
+        </div>
+    </div>
+</div>

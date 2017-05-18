@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="modalBlockingSpinner" class="modal-spinner hidden">
+        <img src="~/Images/circular_loading.gif">
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a id="lnkInterpConfiguratorHome" href="/" class="navbar-brand">
+                    <span class="Subtitle Bold">Interp Configurator</span> <span class="Caption opacity-60">@ViewBag.Version</span><div class="spacer-16"></div><span class="Body">@ViewBag.PageTitle</span>
+                </a>
+            </div>
+            <div class="float-right">
+                <a class="navbar-brand navbar-link">BlueBridge</a>
+
+            </div>
+
+            <div id="dvSitePath" class="hidden">@VirtualPathUtility.ToAbsolute("~/")</div>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/scripts")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @*jquery ui files bundle*@
+    @Scripts.Render("~/bundles/jqueryscripts")
+
+    <script src="~/Scripts/select2.full.min.js"></script>
+    <script src="~/Scripts/jquery.fix.clone.js"></script>
+
+    @Styles.Render("~/Content/jquerycss")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

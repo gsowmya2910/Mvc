@@ -1,0 +1,41 @@
+﻿@model Condition
+
+<div id="dvStep_@Html.DisplayTextFor(model => Model.StepNumber)_Conditions" class="@ViewBag.Conditions">
+    <label class="InterpSubtitle" style="margin-left: 10px;">Condition(s)</label>
+    <input type="hidden" id="dvStep_@Html.DisplayTextFor(model => Model.StepNumber)_Conditions_Counter" value="1" />
+
+    <div id="dvStep_@Html.DisplayTextFor(model => Model.StepNumber)_Condition_1" class="Condition">
+        <div class="container" style="background-color:#F7F7F7; margin: 10px; padding:10px">           
+            <div class="row">
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => Model.SelectedConditionType)
+                    <br />
+                    @Html.DropDownListFor(model => Model.SelectedConditionType, Model.ConditionTypesList, new { @class = "InterpEditDropdown", @id = "SelectedConditionType" })
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayNameFor(model => Model.SelectedFieldType)
+                    <br />
+                    @Html.DropDownListFor(model => Model.SelectedFieldType, Model.FieldTypesList, new { @class = "InterpEditDropdown", @id = "SelectedFieldType" })
+                </div>
+                <div class="col-md-5">
+                    @Html.DisplayNameFor(model => Model.SelectedFieldname)
+                    <br />
+                    @Html.DropDownListFor(model => Model.SelectedFieldname, Model.FieldnamesList, new { @class = "InterpEditDropdown", @id = "SelectedFieldname" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayNameFor(model => Model.SelectedCompareType)
+                    <br />
+                    @Html.DropDownListFor(model => Model.SelectedCompareType, Model.CompareTypesList, new { @class = "InterpEditDropdown", @id = "SelectedCompareType" })
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-9">
+                    @Html.DisplayNameFor(model => Model.CompareValues)
+                    <br />
+                    @Html.TextBoxFor(model => Model.CompareValues, new { @class = "InterpEditTextBox", @id = "CompareValues" })
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

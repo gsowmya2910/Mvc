@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConfigInterp.ServiceLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:ConfigInterp.ServiceLibrary.ConfigInterpService">
+            <summary>
+            Implementation for the Name Inquiry service
+            </summary>
+            <seealso cref="T:ConfigInterp.Contracts.IConfigInterpService" />
+        </member>
+        <member name="F:ConfigInterp.ServiceLibrary.ConfigInterpService._benefitMatrix">
+            <summary>
+            The benefit matrix
+            </summary>
+        </member>
+        <member name="F:ConfigInterp.ServiceLibrary.ConfigInterpService._cipInquire">
+            <summary>
+            The Cip Inquire
+            </summary>
+        </member>
+        <member name="F:ConfigInterp.ServiceLibrary.ConfigInterpService._cipUpdate">
+            <summary>
+            The Cip update
+            </summary>
+        </member>
+        <member name="F:ConfigInterp.ServiceLibrary.ConfigInterpService._converter">
+            <summary>
+            The converter
+            </summary>
+        </member>
+        <member name="F:ConfigInterp.ServiceLibrary.ConfigInterpService._configInterpSql">
+            <summary>
+            SQL handler update
+            </summary>
+        </member>
+        <member name="F:ConfigInterp.ServiceLibrary.ConfigInterpService._descriptionMaster">
+            <summary>
+            The description master
+            </summary>
+        </member>
+        <member name="F:ConfigInterp.ServiceLibrary.ConfigInterpService._flowManager">
+            <summary>
+            The flow manager
+            </summary>
+        </member>
+        <member name="F:ConfigInterp.ServiceLibrary.ConfigInterpService._validation">
+            <summary>
+            The validation
+            </summary>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.#ctor(ConfigInterp.Bl.IValidation,ConfigInterp.Bl.Interfaces.ICipInquireHandler,ConfigInterp.Bl.Update.ICipUpdateHandler,ConfigInterp.Sql.IConfigInterpSqlHandler,ConfigInterp.Bl.BenefitMatrix.IBenefitMatrixHandler,ConfigInterp.Bl.Interfaces.IDescriptionMasterHandler,ConfigInterp.Bl.Interfaces.IWorkflowManager,ConfigInterp.Bl.IConverter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConfigInterp.ServiceLibrary.ConfigInterpService" /> class.
+            </summary>
+            <param name="validation">The validation.</param>
+            <param name="cipInquire">The cip inquire.</param>
+            <param name="cipUpdate">The cip update.</param>
+            <param name="configInterpSql">The configuration interp SQL.</param>
+            <param name="benefitMatrix">The benefit matrix.</param>
+            <param name="descriptionMaster">The description master.</param>
+            <param name="flowManager">The flow manager</param>
+            <param name="converter">The converter.</param>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.#ctor(ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConfigInterp.ServiceLibrary.ConfigInterpService"/> class.
+            </summary>
+            <param name="input">The input.</param>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.CloneInterp(ConfigInterp.Contracts.MessageContracts.CloneInterpRequest)">
+            <summary>
+            This service creates the Outline 23 narrative record for the source interp, then inquires on the target interp, then returns the configuration information with the target interp
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.CreateInterpNarrative(ConfigInterp.Contracts.MessageContracts.CreateInterpRequest)">
+            <summary>
+            Creates the interp narrative.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>the value</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.DeleteInterp(ConfigInterp.Contracts.MessageContracts.DeleteCipInterpRequest)">
+            <summary>
+            Deletes an interp
+            </summary>
+            <param name="request">a delete request</param>
+            <returns>a delete response</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.DeleteInterpNarrative(ConfigInterp.Contracts.MessageContracts.DeleteInterpRequest)">
+            <summary>
+            Deletes the interp narrative.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>the value</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetActionDescription(ConfigInterp.Contracts.MessageContracts.ListRequest)">
+            <summary>
+            Gets the action description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>action list</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetActionParameterDescriptionValidationInfo(ConfigInterp.Contracts.MessageContracts.ListRequest)">
+            <summary>
+            Gets the parameter response.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>validation info</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetActionTypeDescription(ConfigInterp.Contracts.MessageContracts.SystemTypeRequest)">
+            <summary>
+            Gets the action type description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>system request</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetAvailableOutlineCategory(ConfigInterp.Contracts.MessageContracts.OutlineCategoryListRequest)">
+            <summary>
+            Gets the Outline categories.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Outline list</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetCategoryDescription(ConfigInterp.Contracts.MessageContracts.CategoryRequest)">
+            <summary>
+            Gets the category description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetCompareTypeDescription(ConfigInterp.Contracts.MessageContracts.ListRequest)">
+            <summary>
+            Gets the compare description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value list
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetConditionTypeDescription(ConfigInterp.Contracts.MessageContracts.DefaultRequest)">
+            <summary>
+            Gets the condition type description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetExceptionDescription(ConfigInterp.Contracts.MessageContracts.SystemTypeRequest)">
+            <summary>
+            Gets the exception description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The system type
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetFieldNameDescription(ConfigInterp.Contracts.MessageContracts.ListRequest)">
+            <summary>
+            Gets the field name description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The list
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetFieldTypeDescription(ConfigInterp.Contracts.MessageContracts.SystemTypeRequest)">
+            <summary>
+            Gets the field type description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetFieldValidationInfo(ConfigInterp.Contracts.MessageContracts.FieldValidationInfoRequest)">
+            <summary>
+            Gets the field validation info.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>field list</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetInterp(ConfigInterp.Contracts.MessageContracts.InquireRequest)">
+            <summary>
+            Gets the interp.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetInterpDetail(ConfigInterp.Contracts.MessageContracts.InquireRequest)">
+            <summary>
+            Gets the interp detail.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>the value</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetLevelDescription(ConfigInterp.Contracts.MessageContracts.LevelRequest)">
+            <summary>
+            Gets the level description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetOutlineDescription(ConfigInterp.Contracts.MessageContracts.OutlineRequest)">
+            <summary>
+            Gets the Outline description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.GetSubCategoryDescription(ConfigInterp.Contracts.MessageContracts.SubCategoryRequest)">
+            <summary>
+            Gets the sub category description.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            The Value
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.InquireInterpNarrative(ConfigInterp.Contracts.MessageContracts.InquireInterpRequest)">
+            <summary>
+            Inquires the interp narrative.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>the value</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.UpdateInterpConfig(ConfigInterp.Contracts.MessageContracts.UpdateInterpDetailRequest)">
+            <summary>
+            Updates the interp configuration.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>the value</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.UpdateInterpNarrative(ConfigInterp.Contracts.MessageContracts.UpdateInterpRequest)">
+            <summary>
+            Updates the interp narrative.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>the value</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.UpdateInterpStatus(ConfigInterp.Contracts.MessageContracts.StatusChangeRequest)">
+            <summary>
+            Updates the interp status.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>the value</returns>
+        </member>
+        <member name="M:ConfigInterp.ServiceLibrary.ConfigInterpService.ErrorForException(System.Collections.Generic.ICollection{ConfigInterp.Contracts.DataContracts.ErrorItem},System.Exception)">
+            <summary>
+            Errors for exception.
+            </summary>
+            <param name="errors">The errors.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="T:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService">
+            <summary>
+            The class
+            </summary>
+        </member>
+        <member name="P:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService.BenefitMatrix">
+            <summary>
+            Gets or sets the benefit matrix.
+            </summary>
+            <value>
+            The benefit matrix.
+            </value>
+        </member>
+        <member name="P:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService.DescriptionMaster">
+            <summary>
+            Gets or sets the description master.
+            </summary>
+            <value>
+            The description master.
+            </value>
+        </member>
+        <member name="P:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService.Inquire">
+            <summary>
+            Gets or sets the inquire.
+            </summary>
+            <value>
+            The inquire.
+            </value>
+        </member>
+        <member name="P:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService.Sql">
+            <summary>Gets or sets the sql.
+            </summary>
+            <value>
+            The SQL.
+            </value>
+        </member>
+        <member name="P:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService.Update">
+            <summary>
+            Gets or sets the update.
+            </summary>
+            <value>
+            The update.
+            </value>
+        </member>
+        <member name="P:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService.Validation">
+            <summary>
+            Gets or sets the validation.
+            </summary>
+            <value>
+            The validation.
+            </value>
+        </member>
+        <member name="P:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService.Workflow">
+            <summary>
+            Gets or sets the workflow.
+            </summary>
+            <value>
+            The workflow.
+            </value>
+        </member>
+        <member name="P:ConfigInterp.ServiceLibrary.ConfigInterpService.DependanciesForService.Converter">
+            <summary>
+            Gets or sets the converter.
+            </summary>
+            <value>
+            The converter.
+            </value>
+        </member>
+    </members>
+</doc>

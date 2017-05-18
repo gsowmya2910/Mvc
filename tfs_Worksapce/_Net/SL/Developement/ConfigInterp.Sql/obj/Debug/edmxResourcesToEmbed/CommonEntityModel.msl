@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CoreModelStoreContainer" CdmEntityContainer="CoreEntities">
+    <FunctionImportMapping FunctionImportName="GetBenefitMatrixNarrativeVersion" FunctionName="CoreModel.Store.GetBMNarrativeVersion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CoreModel.GetBenefitMatrixNarrativeVersionResult">
+          <ScalarProperty Name="FieldId" ColumnName="FieldID" />
+          <ScalarProperty Name="DescriptionKey" ColumnName="dcm_desc_key" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

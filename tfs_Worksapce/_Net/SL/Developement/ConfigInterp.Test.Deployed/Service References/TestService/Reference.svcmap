@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5cc16015-aab2-4f11-a3c7-abfc36396780" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ConfigInterpService.xsd" MetadataType="Schema" ID="b2c4a02c-183b-4fc7-bc41-640afa4e2863" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ConfigInterpService1.xsd" MetadataType="Schema" ID="6081b6d0-fb89-41ec-ba4d-3ecf6d38ace5" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ConfigInterpService2.xsd" MetadataType="Schema" ID="123fbfcb-5be4-43ea-b790-7e000ed411d9" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ConfigInterpService3.xsd" MetadataType="Schema" ID="732905e9-576c-4c7c-853f-f3479f754cf8" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ConfigInterpService.wsdl" MetadataType="Wsdl" ID="72fc46bd-4d05-4170-a7c5-2661c62fb9b3" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?wsdl" />
+    <MetadataFile FileName="ConfigInterpService4.xsd" MetadataType="Schema" ID="8485845e-f3f5-4706-8308-63797314666b" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ConfigInterpService.disco" MetadataType="Disco" ID="8453d00c-d765-442d-bd8a-e6df7dc12c07" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?disco" />
+    <MetadataFile FileName="ConfigInterpService1.wsdl" MetadataType="Wsdl" ID="f022f861-1683-4109-85d0-604953113325" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ConfigInterpService5.xsd" MetadataType="Schema" ID="2bcaec8b-af8e-4e6d-81b4-6b869625c7c3" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ConfigInterpService6.xsd" MetadataType="Schema" ID="d82c484a-be93-4335-be3e-20a854bfe289" SourceId="1" SourceUrl="http://testbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

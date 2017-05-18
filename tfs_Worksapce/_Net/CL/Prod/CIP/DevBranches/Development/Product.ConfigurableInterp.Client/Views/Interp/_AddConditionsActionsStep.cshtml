@@ -1,0 +1,44 @@
+﻿@model Interp
+
+<div class="InterpStep StepCondition" id="@ViewBag.DivActionConditionStepID" stepcontainer="@Model.ActionObject.StepNumber">
+    <header id="head-@ViewBag.DivActionConditionStepID">
+        Step @Html.DisplayTextFor(model => Model.ActionObject.StepNumber)
+        <div class="ActionButtons float-right">
+            <img src="~/Images/Trash_white.png" alt="Delete" class="ActionButton" id="btnStep_ActionsConditions_DeleteStep-@ViewBag.DivActionConditionStepID" title="Delete Step" onclick="deleteInterpStep('@ViewBag.DivActionConditionStepID', '@ViewBag.DivActionConditionStepID_Step_@Model.ActionObject.StepNumber', 'btnStep_ActionsConditions_DeleteStep-@ViewBag.DivActionConditionStepID')" />
+            <img src="~/Images/Copy_white.png" alt="Copy" class="ActionButton" id="btnStep_ActionsConditions_CopyStep-@ViewBag.DivExceptionStepID" onclick="copyActionsConditionsStep('dvStep_@Html.DisplayTextFor(model => Model.ErrorObject.StepNumber)_Exceptions', 'btnStep_@Html.DisplayTextFor(model => Model.ErrorObject.StepNumber)Copy_Actions_Conditions_1')" />
+            <img src="~/Images/Move_white.png" alt="Move" class="ActionButton" id="btnStep_MoveStep" title="Reorder Step" />
+        </div>
+    </header>
+
+    <div class="InterpContent" id="dvStep-@ViewBag.DivActionConditionStepID-Actions_Conditions">
+
+        <div id="divStep-@ViewBag.DivActionConditionStepID-Conditions" class="@ViewBag.Conditions">
+            <label class="InterpSubtitle" style="margin-left: 10px;" id="divStep_@Model.ActionObject.StepNumber-Condition_Label">Condition(s)</label>
+            <input type="hidden" id="divStep_@Model.ActionObject.StepNumber-Conditions_Counter" value="@Model.ActionObject.StepNumber" />
+        </div>
+
+        <div id="divStep_@Model.ActionObject.StepNumber-Condition_@Model.ActionObject.StepNumber" class="Condition">
+
+            @{Html.RenderPartial("_AddConditions", Model);}
+
+            <div id="divStep_@Model.ActionObject.StepNumber-Condition_Links">
+                <a href="#" onclick="addOrIfCondition('divStep_@Model.ActionObject.StepNumber-Condition_Links','@ViewBag.RowOrder', '3','@Model.ActionObject.StepNumber')" id="add_OrIf_Condition" style="text-decoration: underline; margin-left: 10px;">Add 'Or If' Condition</a>
+                &nbsp;&nbsp;
+                <a href="#" onclick="addOrIfCondition('divStep_@Model.ActionObject.StepNumber-Condition_Links', '@ViewBag.RowOrder', '2', '@Model.ActionObject.StepNumber')" id="add_AndIf_Condition" style="text-decoration: underline; margin-left: 10px;">Add 'And If' Condition</a>
+            </div>
+            <hr />
+
+            <div id="dvStep-@ViewBag.DivActionConditionStepID-EmptyActions" class="@ViewBag.NoActions">
+                <label class="InterpSubtitle" style="margin-left: 10px;">Action(s)</label>
+                <br /><br />
+                <label class="InterpNoValuesText" style="margin-left: 10px;">No Actions</label>
+                <br /><br />
+            </div>
+            <div id="dvStep-@ViewBag.DivActionConditionStepID-Action_Links">
+                <a href="#" onclick="addTrueAction('divStep_@Model.ActionObject.StepNumber-Condition_Links','@ViewBag.RowPosition', '2')" id="add_True_Action" style="text-decoration: underline;margin-left: 10px;">Add 'True' Action</a>
+                &nbsp;&nbsp;
+                <a href="#" onclick="addFalseAction('dvStep-@ViewBag.DivActionConditionStepID-Action_1', 'dvStep-@ViewBag.DivActionConditionStepID-Actions_Counter', 'btnStep-@ViewBag.DivActionConditionStepID-Move_Action_1', 'btnStep-@ViewBag.DivActionConditionStepID-Delete_Action_1', 'False')" id="add_False_Action" style="text-decoration: underline;margin-left: 10px;">Add 'False' Action</a>
+            </div>
+        </div>
+    </div>
+</div>

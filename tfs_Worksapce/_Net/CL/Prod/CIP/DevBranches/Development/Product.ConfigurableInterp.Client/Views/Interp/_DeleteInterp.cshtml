@@ -1,0 +1,32 @@
+﻿@model Interp
+
+<div class="container InterpBody">
+    <div class="row">
+        <div class="col-xs-12">
+            @Html.Label("Delete Interp Draft?", new { @class = "Subtitle" })
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12">
+            Are you sure you want to delete this interp draft?
+        </div>
+    </div>
+    <br />
+    <div class="row hidden" id="deleteInterpErrorRow">
+        <div class="col-xs-12">
+            <img id="imgDelInterp" src="~/Images/invalid@2x.png" />
+            &nbsp;
+            <span id="deleteInterpMessage"></span>
+            <br /><br />
+        </div>
+    </div>
+
+    <div style="text-align:right">
+        <div>
+            <button class="SecondaryButton" id="btnCancelDeleteInterp" onclick="clearDelete()" aria-hidden="true">Cancel</button>
+            <button class="PrimaryButton" id="btnDeleteInterp" onclick="deleteInterp(@Json.Encode(Model.InterpId));">Delete</button>
+        </div>
+    </div>
+</div>

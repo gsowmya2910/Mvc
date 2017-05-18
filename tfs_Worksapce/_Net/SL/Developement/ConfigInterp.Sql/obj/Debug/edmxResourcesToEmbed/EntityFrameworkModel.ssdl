@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CIPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="GetActionDesc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+    <Parameter Name="actionTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetActionParmDescAndValidationInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+    <Parameter Name="ActionID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetActionTypeDesc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAvailableOutlineCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+    <Parameter Name="OutlineID" Type="int" Mode="In" />
+    <Parameter Name="CategoryID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetCompareTypeDesc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+    <Parameter Name="ValueTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetConditionTypeDesc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetExceptionDesc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetFieldNameDesc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+    <Parameter Name="FieldTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetFieldTypeDesc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetFieldValidationInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemTypeID" Type="int" Mode="In" />
+    <Parameter Name="FieldTypeID" Type="int" Mode="In" />
+    <Parameter Name="FieldID" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="CIPModelStoreContainer" />
+</Schema>

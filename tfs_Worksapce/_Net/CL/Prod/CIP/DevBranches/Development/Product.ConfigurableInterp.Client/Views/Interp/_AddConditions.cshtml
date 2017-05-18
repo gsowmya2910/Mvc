@@ -1,0 +1,70 @@
+﻿@model Interp
+
+<div class="container" style="background-color:#F7F7F7; margin: 10px; padding:10px;" id="rowContainer_divstep_@ViewBag.DivActionConditionStepID">
+
+    @{string id = "selectcontainer_" + ViewBag.DivActionConditionStepID + "_row_" + ViewBag.RowOrder;
+    string CompareToValues = "cvselectcontainer" + ViewBag.DivActionConditionStepID + "_row_" + ViewBag.RowOrder;
+    string CompareToValueInputId = ViewBag.DivActionConditionStepID + "_" + ViewBag.RowOrder;
+    }
+
+    <!-- Header -->
+    <div class="row">
+        @if (ViewBag.RowOrder > 1)
+        {
+            <div class="col-lg-12 text-right">
+                <img src="~/Images/Trash.png" alt="Delete" class="ActionButton" onclick="deleteCondition('rowContainer_divstep_@ViewBag.DivActionConditionStepID', '@ViewBag.RowOrder');" id="btnStep-@ViewBag.DivActionConditionStepID-Delete_Condition_1" title="Delete Condition" />
+            </div>
+        }
+    </div>
+
+    <!-- Condition Section -->
+    <div class="row">
+
+        <!-- Condition Type -->
+        <div class="col-md-2" @Html.Raw(!String.IsNullOrEmpty(Model.ConditionObject.SelectedConditionType) && Model.ConditionObject.SelectedConditionType.Length > 0 && int.Parse(Model.ConditionObject.SelectedConditionType) == 1 ? "style='padding-left: 60px'" : "")>
+            @Html.LabelFor(model => Model.ConditionObject.SelectedConditionType, new { @class = "Body FormLabel" })
+
+            @if (ViewBag.RowOrder == 1)
+            {
+                @*<label class="FirstRowConditional" style="margin-left: 10px;" id="divStep_@Model.ActionObject.StepNumber-Conditional_Label">IF</label>*@
+                @Html.DropDownListFor(model => Model.ConditionObject.SelectedConditionType, Model.ConditionObject.ConditionTypesList, new { @disabled = "disabled", @class = "slctComboBox", @id = "SelectedConditionType" })
+            }
+            else
+            {
+                @Html.DropDownListFor(model => Model.ConditionObject.SelectedConditionType, Model.ConditionObject.ConditionTypesList, new { @class = "slctComboBox", @id = "SelectedConditionType" })
+            }
+        </div>
+
+        <!-- Field Type -->
+        <div class="col-md-2">
+            @Html.LabelFor(model => Model.ConditionObject.SelectedFieldType, new { @class = "Body FormLabel" })
+            @Html.DropDownListFor(model => Model.ConditionObject.SelectedFieldType, Model.ConditionObject.FieldTypesList, string.Empty, new { @class = "slctComboBox", @id = "SelectedFieldType", @onchange = "fieldTypeChange(" + "this" + ",'" + id + "','" + CompareToValues + "','" + CompareToValueInputId + "'," + "'SelectedFieldType'" + ")" })
+        </div>
+
+        <!-- Field Name -->
+        <div class="col-md-4">
+            @Html.LabelFor(model => Model.ConditionObject.SelectedFieldName, new { @class = "Body FormLabel" })
+            <div id="@id">
+                @Html.DropDownListFor(model => Model.ConditionObject.SelectedFieldName, Model.ConditionObject.FieldnamesList, string.Empty, new { @class = "slctComboBox", @id = "SelectedFieldName", @onchange = "fieldNameChange(" + "this" + ",'" + CompareToValues + "','" + CompareToValueInputId + "','SelectedFieldType'" + ")" })
+            </div>
+        </div>
+
+        <!-- Compare Type -->
+        <div class="col-md-4">
+            @Html.LabelFor(model => Model.ConditionObject.SelectedCompareType, new { @class = "Body FormLabel" })
+            <div id="@CompareToValues">
+                @Html.DropDownListFor(model => Model.ConditionObject.SelectedCompareType, Model.ConditionObject.CompareTypesList, string.Empty, new { @class = "slctComboBoxCompare", @id = "SelectedCompareType" + CompareToValueInputId, onchange = "GetValidationType(" + "this,'" + "SelectedFieldname" + "','" + CompareToValueInputId + "')" })
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <!-- Compare Values -->
+    <div class="row" id="@CompareToValueInputId">
+        <div class="col-lg-11" style="padding-left: 240px;">
+            @Html.LabelFor(model => Model.ConditionObject.CompareValues, new { @class = "Body FormLabel" })
+            @Html.TextBoxFor(model => Model.ConditionObject.CompareValues, new { @class = "InterpEditTextBox col-lg-10", @id = "CompareValues", @valueType = "0", @onfocusout = "GetValidationType(this)" })
+        </div>
+    </div>
+
+</div>

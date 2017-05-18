@@ -1,0 +1,18 @@
+﻿@model Interp
+
+<div class="container" style="background-color:#F7F7F7; margin: 10px; padding:10px">
+    <div class="row">
+        <div class="col-lg-12 text-right">
+            <img src="~/Images/Trash.png" alt="Delete" class="editbtn" id='btn_Delete_Exception' onclick="deleteException('@ViewBag.DivExceptionStepID', 'dvStep_@Html.DisplayTextFor(model => Model.Exceptions[0].StepNumber)_Exceptions', 'dvStep_@Html.DisplayTextFor(model => Model.Exceptions[0].StepNumber)_Exception_1', 'dvStep_@Html.DisplayTextFor(model => Model.Exceptions[0].StepNumber)_Exceptions_Counter')" />
+            &nbsp;&nbsp;
+            <img src="~/Images/Move.png" alt="Move" class="editbtn" id="btn_Move_Exception" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            @Html.DisplayNameFor(Model => Model.SelectedException)
+            <br />
+            @Html.DropDownListFor(Model => Model.SelectedException, Model.ExceptionsList, new { @class = "InterpEditDropdown" })
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@model Product.ConfigurableInterp.Client.Models.Action
+
+<div id="dvStep_@Html.DisplayTextFor(Model => Model.StepNumber)_EmptyActions" class="@ViewBag.NoActions">
+    <label class="InterpSubtitle" style="margin-left: 10px;">Actions(s)</label>
+    <br /><br />
+    <label class="InterpNoValuesText" style="margin-left: 10px;">No Actions</label>
+    <br /><br />
+    <a href="#" onclick="addNewAction('dvStep_@Html.DisplayTextFor(Model => Model.StepNumber)_EmptyActions', 'dvStep_@Html.DisplayTextFor(Model => Model.StepNumber)_Actions')" id="add_actions" style="text-decoration: underline; margin-left: 10px;">Add Actions</a>
+    <br /><br />
+</div>

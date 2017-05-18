@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://corelink.com/v1.0.0/profiletransport" elementFormDefault="qualified" targetNamespace="http://corelink.com/v1.0.0/profiletransport" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ApplicationId" nillable="true" type="xs:string" />
+  <xs:element name="CorrespondenceLocation" nillable="true" type="xs:string" />
+  <xs:element name="Region" type="xs:int" />
+  <xs:element name="UnisysUsercode" nillable="true" type="xs:string" />
+  <xs:element name="UserId" nillable="true" type="xs:string" />
+</xs:schema>

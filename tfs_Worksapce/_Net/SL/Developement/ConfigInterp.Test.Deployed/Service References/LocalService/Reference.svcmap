@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="089d9ad7-286a-4634-a582-769ac7112a88" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2344/ConfigInterpService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ConfigInterpService.xsd" MetadataType="Schema" ID="e5541a1f-7e2d-4c56-b7b0-89b0c759f24c" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ConfigInterpService1.xsd" MetadataType="Schema" ID="13805f4a-8ce0-47d6-b0a6-8831e9eb76e3" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ConfigInterpService2.xsd" MetadataType="Schema" ID="7b581b0c-6972-4faa-ac71-c42e6c738da0" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ConfigInterpService3.xsd" MetadataType="Schema" ID="69528254-e22f-43af-92b3-f90e149b6605" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ConfigInterpService.wsdl" MetadataType="Wsdl" ID="cd99ad93-760a-4064-9678-fc63ae4083e1" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?wsdl" />
+    <MetadataFile FileName="ConfigInterpService4.xsd" MetadataType="Schema" ID="c1dc7e1e-77f4-4afa-84ed-b9bc44e1e287" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ConfigInterpService5.xsd" MetadataType="Schema" ID="b1440b94-2266-4608-b5e7-9d5407e9676e" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ConfigInterpService.disco" MetadataType="Disco" ID="be0405b6-7ae4-43dd-8b72-8947b5eabef0" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?disco" />
+    <MetadataFile FileName="ConfigInterpService1.wsdl" MetadataType="Wsdl" ID="9112aac2-a198-4d66-a2ee-27ab68aa684c" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ConfigInterpService6.xsd" MetadataType="Schema" ID="96a8ac35-b4f6-4594-8ee7-73a25e4ed54e" SourceId="1" SourceUrl="http://localhost:2344/ConfigInterpService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

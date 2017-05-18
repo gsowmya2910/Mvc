@@ -1,0 +1,38 @@
+﻿ @{
+
+     var CompareTypeList = new List<SelectListItem>();
+
+     CompareTypeList = ViewBag.CompareTypeList;
+}
+
+@Html.DropDownList("Compare", CompareTypeList, string.Empty, new { @class = "slctComboBoxCompare", @id = "SelectedCompareType" + ViewBag.ElementId, onchange = "GetValidationType('" + "this','" + "SelectedFieldName" + "','" + ViewBag.ElementId + "')" })
+
+
+@if (CompareTypeList.Count != 0)
+{
+
+    foreach (var item in CompareTypeList)
+    {
+
+        if (item.Text == ">=" || item.Text == "<=")
+        {
+            <script type="text/javascript">
+                $("#" + '@ViewBag.ElementId').show();
+            </script>
+            break;
+        }
+       
+            <script type="text/javascript">
+                $("#" + '@ViewBag.ElementId').hide();
+            </script>
+    }
+}
+
+else
+{
+
+    <script type="text/javascript">
+        $("#" + '@ViewBag.ElementId').hide();
+    </script>
+
+}

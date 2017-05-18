@@ -1,0 +1,29 @@
+﻿@model DashboardModel
+
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<label for="InterpNumber" class="Body FormLabel">Interp Number</label> 
+<input type="text" id="InterpNumber" placeholder="##-###-###-####" required="required" class="Body FormField FormInput" />
+
+    <input id="btnOpenInterp" type="button" class="PrimaryButton" value="Open" disabled="disabled"/>
+    <a id="createInterpModalButton" href="#createInterpModal" data-toggle="modal" class="SecondaryButton">Create New Interp</a>
+    <img id="openInterpSpinner" src="~/Images/circular_loading.gif" class="hidden inline-block FormInputSize">
+
+    <div class="modal fade" id="createInterpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-large">
+            <div class="modal-content">
+                @Html.Partial("~/Views/Interp/_CreateNewInterp.cshtml", Model.NewInterp)
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#InterpNumber").mask("99-999-999-9999", { placeholder: "##-###-###-####" });
+
+        });
+
+    </script>

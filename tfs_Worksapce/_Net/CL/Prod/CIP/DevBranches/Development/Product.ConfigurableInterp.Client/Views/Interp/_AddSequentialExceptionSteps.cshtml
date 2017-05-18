@@ -1,0 +1,19 @@
+﻿@model Interp
+
+
+<div roworder="@ViewBag.RowOrder" id="dvStep-@ViewBag.DivExceptionStepID-@Model.ErrorObject.StepNumber-Exception_Row_@ViewBag.RowOrder" class="container" style="background-color:#F7F7F7; margin: 10px; padding:10px">
+
+
+
+    <div class="row">
+
+        <div class="col-lg-12" id="#dropDownConainter">
+            @Html.LabelFor(model => Model.SelectedException, new { @class = "Body FormLabel" })
+
+            @Html.DropDownListFor(model => Model.SelectedException, Model.ExceptionsList, string.Empty, new { @class = "slctComboBox", @id = "SelectedException" })
+
+
+        </div>
+    </div>
+</div>
+<br />

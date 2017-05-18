@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.corelinksolutions.com/product/contract/configinterp/service" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ConfigInterpService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://schemas.corelinksolutions.com/product/contract/configinterp/service" location="http://localhost:2344/ConfigInterpService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IConfigInterpService" type="i0:IConfigInterpService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateInterpNarrative">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/CreateInterpNarrative" style="document" />
+      <wsdl:input name="CreateInterpRequest">
+        <soap:header message="i0:CreateInterpRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:CreateInterpRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:CreateInterpRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:CreateInterpRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:CreateInterpRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InterpNarrativeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInterp">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/DeleteInterp" style="document" />
+      <wsdl:input name="DeleteCipInterpRequest">
+        <soap:header message="i0:DeleteCipInterpRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:DeleteCipInterpRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:DeleteCipInterpRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:DeleteCipInterpRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:DeleteCipInterpRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ChangeInterpResultResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionDescription" style="document" />
+      <wsdl:input name="ListRequest">
+        <soap:header message="i0:ListRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionCommonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionParameterDescriptionValidationInfo">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionParameterDescriptionValidationInfo" style="document" />
+      <wsdl:input name="ListRequest">
+        <soap:header message="i0:ListRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ActionParameterDescriptionValidationInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionTypeDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionTypeDescription" style="document" />
+      <wsdl:input name="SystemTypeRequest">
+        <soap:header message="i0:SystemTypeRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionCommonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableOutlineCategory">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetAvailableOutlineCategory" style="document" />
+      <wsdl:input name="OutlineCategoryListRequest">
+        <soap:header message="i0:OutlineCategoryListRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:OutlineCategoryListRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:OutlineCategoryListRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:OutlineCategoryListRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:OutlineCategoryListRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AvailableOutlineCategoryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCategoryDescription" style="document" />
+      <wsdl:input name="CategoryRequest">
+        <soap:header message="i0:CategoryRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:CategoryRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:CategoryRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:CategoryRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:CategoryRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompareTypeDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCompareTypeDescription" style="document" />
+      <wsdl:input name="ListRequest">
+        <soap:header message="i0:ListRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionCommonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetConditionTypeDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetConditionTypeDescription" style="document" />
+      <wsdl:input name="DefaultRequest">
+        <soap:header message="i0:DefaultRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:DefaultRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:DefaultRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:DefaultRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:DefaultRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionCommonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExceptionDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetExceptionDescription" style="document" />
+      <wsdl:input name="SystemTypeRequest">
+        <soap:header message="i0:SystemTypeRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionCommonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldNameDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldNameDescription" style="document" />
+      <wsdl:input name="ListRequest">
+        <soap:header message="i0:ListRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:ListRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="FieldNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldTypeDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldTypeDescription" style="document" />
+      <wsdl:input name="SystemTypeRequest">
+        <soap:header message="i0:SystemTypeRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:SystemTypeRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionCommonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldValidationInfo">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldValidationInfo" style="document" />
+      <wsdl:input name="FieldValidationInfoRequest">
+        <soap:header message="i0:FieldValidationInfoRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:FieldValidationInfoRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:FieldValidationInfoRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:FieldValidationInfoRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:FieldValidationInfoRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="FieldValidationInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterp">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterp" style="document" />
+      <wsdl:input name="InquireRequest">
+        <soap:header message="i0:InquireRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:InquireRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:InquireRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:InquireRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:InquireRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SimpleInterpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterpDetail">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpDetail" style="document" />
+      <wsdl:input name="InquireRequest">
+        <soap:header message="i0:InquireRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:InquireRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:InquireRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:InquireRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:InquireRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DetailedInterpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLevelDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetLevelDescription" style="document" />
+      <wsdl:input name="LevelRequest">
+        <soap:header message="i0:LevelRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:LevelRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:LevelRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:LevelRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:LevelRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutlineDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetOutlineDescription" style="document" />
+      <wsdl:input name="OutlineRequest">
+        <soap:header message="i0:OutlineRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:OutlineRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:OutlineRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:OutlineRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:OutlineRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategoryDescription">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetSubCategoryDescription" style="document" />
+      <wsdl:input name="SubCategoryRequest">
+        <soap:header message="i0:SubCategoryRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:SubCategoryRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:SubCategoryRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:SubCategoryRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:SubCategoryRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InquireInterpNarrative">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/InquireInterpNarrative" style="document" />
+      <wsdl:input name="InquireInterpRequest">
+        <soap:header message="i0:InquireInterpRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:InquireInterpRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:InquireInterpRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:InquireInterpRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:InquireInterpRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InquireInterpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInterpConfig">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpConfig" style="document" />
+      <wsdl:input name="UpdateInterpDetailRequest">
+        <soap:header message="i0:UpdateInterpDetailRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:UpdateInterpDetailRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:UpdateInterpDetailRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:UpdateInterpDetailRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:UpdateInterpDetailRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ChangeInterpResultResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInterpNarrative">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpNarrative" style="document" />
+      <wsdl:input name="UpdateInterpRequest">
+        <soap:header message="i0:UpdateInterpRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:UpdateInterpRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:UpdateInterpRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:UpdateInterpRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:UpdateInterpRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InterpNarrativeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInterpStatus">
+      <soap:operation soapAction="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpStatus" style="document" />
+      <wsdl:input name="StatusChangeRequest">
+        <soap:header message="i0:StatusChangeRequest_Headers" part="ApplicationId" use="literal" />
+        <soap:header message="i0:StatusChangeRequest_Headers" part="CorrespondenceLocation" use="literal" />
+        <soap:header message="i0:StatusChangeRequest_Headers" part="Region" use="literal" />
+        <soap:header message="i0:StatusChangeRequest_Headers" part="UnisysUsercode" use="literal" />
+        <soap:header message="i0:StatusChangeRequest_Headers" part="UserId" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ChangeInterpResultResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceUnavailableFaultFault">
+        <soap:fault use="literal" name="ServiceUnavailableFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnhandledExceptionFaultFault">
+        <soap:fault use="literal" name="UnhandledExceptionFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BusinessFaultFault">
+        <soap:fault use="literal" name="BusinessFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConfigInterpService">
+    <wsdl:port name="BasicHttpBinding_IConfigInterpService" binding="tns:BasicHttpBinding_IConfigInterpService">
+      <soap:address location="http://localhost:2344/ConfigInterpService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

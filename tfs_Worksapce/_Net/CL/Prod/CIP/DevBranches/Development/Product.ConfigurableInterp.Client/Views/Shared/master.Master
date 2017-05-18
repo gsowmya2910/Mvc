@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Interp Configurator</title>
+
+    <script language="javascript" type="text/javascript">
+        var sessionID = '<%=Response.ApplyAppPathModifier("~/") %>';
+        sessionID = sessionID.substring(1, sessionID.length - 1);
+        var appRegion = '<%=Session["RegionCode"].ToString()%>';
+        var appEnvironment = '<%: ConfigurationManager.AppSettings["DataSource"].ToUpperInvariant() %>';
+    </script>
+    <link href="<%=VirtualPathUtility.ToAbsolute("~/Content")%>/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="<%=VirtualPathUtility.ToAbsolute("~/Content")%>/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<%=VirtualPathUtility.ToAbsolute("~/Content")%>/Interp.css" rel="stylesheet" type="text/css" />
+    <link href="<%=VirtualPathUtility.ToAbsolute("~/Content")%>/Site.css" rel="stylesheet" type="text/css" />
+
+    <link href="<%=VirtualPathUtility.ToAbsolute("~/Content")%>/<%=Session["Color"].ToString()%>" rel="stylesheet" type="text/css" />
+
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/bootstrap.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery-1.10.2.intellisense.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery-migrate-1.4.1.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery.searchabledropdown-1.0.8.min.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery.validate-vsdoc.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery.validate.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/modernizr-2.6.2.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/respond.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/respond.min.js" type="text/javascript"></script>
+    <!-- custom javascript here  -->
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/Interp.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/EditInterp.js" type="text/javascript"></script>
+    <script src="<%=VirtualPathUtility.ToAbsolute("~/Scripts")%>/NewInterp.js" type="text/javascript"></script>
+
+    <%Server.Execute("~/SessionWatch.aspx"); %>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // This will reset the client timer on every click
+            $('#body').click(function () { SessionWatch_ResetTimer(); });
+
+            $(window).bind('beforeunload', function () {
+                //This may be needed for adding a check when in Edit mode
+            });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <input id="region" type="hidden" value="<%:HttpContext.Current.Session["RegionCode"].ToString()%>" />
+    <div id="header">
+        <div id="mainNavi">
+            <div class="naviR">
+                <ul id="navbar">
+                    <li style="padding: 0.2em">
+                        <%: ((BlueBridgeRegion)HttpContext.Current.Session["Region"]).Abbreviation %>
+                    </li>
+                    <li class="help"><a id="help" href="#">Help</a></li>
+                </ul>
+            </div>
+            <div class="title">
+                <%: BlueBridge.GetBlueBridgeApplicationName() %>
+                <% if (ConfigurationManager.AppSettings["DataSource"].ToUpperInvariant() != "PRODUCTION")
+                   {%>
+                (<%: ConfigurationManager.AppSettings["DataSource"] %>)
+                <%} %>
+            </div>
+        </div>
+        <% if (HttpContext.Current.User.Identity.IsAuthenticated)
+           { %>
+        <div id="subNavi">
+
+            <div class="naviL">
+                <ul id="subbar">
+                    <li><a href="#">Utilities
+                    <img src="<%=VirtualPathUtility.ToAbsolute("~/Content")%>/Images/desc.gif" alt="" /></a>
+                        <ul id="Utilities" style="width: 150px;">
+                            <li class="corTop corBottom"><a title="DescCodes" href="#"><cite id="DescriptionCodeEdit" style="color: black;">Description Codes</cite></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <%} %>
+    </div>
+    <div id="body">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

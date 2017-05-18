@@ -1,0 +1,30 @@
+﻿@model Interp  
+
+<div class="InterpStep StepException" id="@ViewBag.DivExceptionStepID" stepcontainer="@Model.ErrorObject.StepNumber">
+    <header id="head-@ViewBag.DivExceptionStepID">
+        Step @Html.DisplayTextFor(model => Model.ErrorObject.StepNumber)
+        <div class="ActionButtons float-right">
+            <img src="~/Images/Trash_white.png" alt="Delete" class="ActionButton" id="btnStep_Exceptions_DeleteStep-@ViewBag.DivExceptionStepID" title="Delete Step" onclick="deleteInterpStep('@ViewBag.DivExceptionStepID', ' @ViewBag.DivExceptionStepID_Step_ @Model.ErrorObject.StepNumber ', 'btnstep_@Html.DisplayTextFor(model => model.ErrorObject.StepNumber)_delete_exception_1')" />
+            <img src="~/Images/Copy_white.png" alt="Copy" class="ActionButton" id="btnStep_Exceptions_CopyStep-@ViewBag.DivExceptionStepID" onclick="copyExceptionStep('@ViewBag.DivExceptionStepID_Step_@Model.ErrorObject.StepNumber', 'btnStep_@Html.DisplayTextFor(model => Model.ErrorObject.StepNumber)_Copy_Exception_1')" />
+            <img src="~/Images/Move_white.png" alt="Move" class="ActionButton" id="btnStep_MoveStep" title="Reorder Step" />
+        </div>
+    </header>
+    <div class="InterpContent" id="dvStep_@Html.DisplayTextFor(model => Model.ErrorObject.StepNumber)_Exceptions">
+
+        <div id="dvStep_@Html.DisplayTextFor(model => Model.ErrorObject.StepNumber)_EmptyExceptions" class="@ViewBag.NoExceptions">
+            <label class="Subtitle">Exception(s)</label>
+            <br />
+            <label class="InterpNoValuesText">No Exceptions</label>
+            <br />
+        </div>
+
+        
+    
+    
+    @{Html.RenderPartial("_AddSequentialExceptionSteps", Model);}
+    
+    
+    @* This div is the same as the template div above.  This is the first one displayed where the template is used for adding new ones. *@
+
+    </div>
+</div>

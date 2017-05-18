@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.corelinksolutions.com/product/schema/configinterp" elementFormDefault="qualified" targetNamespace="http://schemas.corelinksolutions.com/product/schema/configinterp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2344/ConfigInterpService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" />
+  <xs:import schemaLocation="http://localhost:2344/ConfigInterpService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="CreateInterpNarrativeData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpDataBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateInterpNarrativeData" nillable="true" type="tns:CreateInterpNarrativeData" />
+  <xs:complexType name="InterpDataBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdmitInterp" type="xs:short" />
+      <xs:element minOccurs="0" name="Category" type="xs:short" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="LineOfBusiness" type="q1:LineOfBusiness" />
+      <xs:element minOccurs="0" name="Outline" type="xs:short" />
+      <xs:element minOccurs="0" name="SubCategory" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterpDataBase" nillable="true" type="tns:InterpDataBase" />
+  <xs:complexType name="ArrayOfErrorItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorItem" nillable="true" type="tns:ErrorItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorItem" nillable="true" type="tns:ArrayOfErrorItem" />
+  <xs:complexType name="ErrorItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prop" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorItem" nillable="true" type="tns:ErrorItem" />
+  <xs:complexType name="DeleteCipInterpData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpDataBase">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q2:InterpStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteCipInterpData" nillable="true" type="tns:DeleteCipInterpData" />
+  <xs:complexType name="ArrayOfDescriptionCommon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DescriptionCommon" nillable="true" type="tns:DescriptionCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDescriptionCommon" nillable="true" type="tns:ArrayOfDescriptionCommon" />
+  <xs:complexType name="DescriptionCommon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PseudoDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DescriptionCommon" nillable="true" type="tns:DescriptionCommon" />
+  <xs:complexType name="ArrayOfActionParameterDescriptionValidationInfoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionParameterDescriptionValidationInfoData" nillable="true" type="tns:ActionParameterDescriptionValidationInfoData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActionParameterDescriptionValidationInfoData" nillable="true" type="tns:ArrayOfActionParameterDescriptionValidationInfoData" />
+  <xs:complexType name="ActionParameterDescriptionValidationInfoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FormatDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormatInputHintDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormatInputPattern" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormatTypeId" type="xs:short" />
+      <xs:element minOccurs="0" name="IsOptional" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaximumSize" type="xs:short" />
+      <xs:element minOccurs="0" name="MinimumSize" type="xs:short" />
+      <xs:element minOccurs="0" name="OrderSequence" type="xs:short" />
+      <xs:element minOccurs="0" name="ParameterDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParameterPseudoDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueTypeId" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionParameterDescriptionValidationInfoData" nillable="true" type="tns:ActionParameterDescriptionValidationInfoData" />
+  <xs:complexType name="ArrayOfAvailableOutlineCategoryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AvailableOutlineCategoryData" nillable="true" type="tns:AvailableOutlineCategoryData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAvailableOutlineCategoryData" nillable="true" type="tns:ArrayOfAvailableOutlineCategoryData" />
+  <xs:complexType name="AvailableOutlineCategoryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:short" />
+      <xs:element minOccurs="0" name="OutlineId" type="xs:short" />
+      <xs:element minOccurs="0" name="PseudoCategoryLiteralDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusId" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AvailableOutlineCategoryData" nillable="true" type="tns:AvailableOutlineCategoryData" />
+  <xs:complexType name="CategoryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" type="xs:short" />
+      <xs:element minOccurs="0" name="Outline" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryData" nillable="true" type="tns:CategoryData" />
+  <xs:complexType name="ArrayOfFieldNameData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldNameData" nillable="true" type="tns:FieldNameData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFieldNameData" nillable="true" type="tns:ArrayOfFieldNameData" />
+  <xs:complexType name="FieldNameData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldPseudoDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualifierPseudoDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldNameData" nillable="true" type="tns:FieldNameData" />
+  <xs:complexType name="ArrayOfFieldValidationInfoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldValidationInfoData" nillable="true" type="tns:FieldValidationInfoData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFieldValidationInfoData" nillable="true" type="tns:ArrayOfFieldValidationInfoData" />
+  <xs:complexType name="FieldValidationInfoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FormatDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormatInputHintDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormatInputPattern" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormatTypeId" type="xs:short" />
+      <xs:element minOccurs="0" name="MaxSize" type="xs:short" />
+      <xs:element minOccurs="0" name="MinSize" type="xs:short" />
+      <xs:element minOccurs="0" name="QualifierTypeNumber" type="xs:short" />
+      <xs:element minOccurs="0" name="ValueTypeId" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldValidationInfoData" nillable="true" type="tns:FieldValidationInfoData" />
+  <xs:complexType name="InquireInputData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdmitInterp" type="xs:short" />
+      <xs:element minOccurs="0" name="Category" type="xs:short" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="LineOfBusiness" type="q3:LineOfBusiness" />
+      <xs:element minOccurs="0" name="Outline" type="xs:short" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q4:InterpStatus" />
+      <xs:element minOccurs="0" name="SubCategory" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InquireInputData" nillable="true" type="tns:InquireInputData" />
+  <xs:complexType name="InquireSimpleOutputData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InquireOutputDataBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Level" type="xs:short" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InquireSimpleOutputData" nillable="true" type="tns:InquireSimpleOutputData" />
+  <xs:complexType name="InquireOutputDataBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpConfigBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LastEdited" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InquireOutputDataBase" nillable="true" type="tns:InquireOutputDataBase" />
+  <xs:complexType name="InterpConfigBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpDataBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="CurrentStatus" type="q5:InterpStatus" />
+          <xs:element minOccurs="0" name="EmployeeNumber" type="xs:short" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="EmployeeRegion" type="q6:Plan" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterpConfigBase" nillable="true" type="tns:InterpConfigBase" />
+  <xs:complexType name="InterpDetailOutData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpConfigBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfiguredSteps" nillable="true" type="tns:ConfiguredSteps" />
+          <xs:element minOccurs="0" name="LastEdited" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterpDetailOutData" nillable="true" type="tns:InterpDetailOutData" />
+  <xs:complexType name="ConfiguredSteps">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConditionalSteps" nillable="true" type="tns:ArrayOfConditionalStep" />
+      <xs:element minOccurs="0" name="ExceptionSteps" nillable="true" type="tns:ArrayOfExceptionStep" />
+      <xs:element minOccurs="0" name="UnconditionalSteps" nillable="true" type="tns:ArrayOfUnconditionalStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfiguredSteps" nillable="true" type="tns:ConfiguredSteps" />
+  <xs:complexType name="ArrayOfConditionalStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConditionalStep" nillable="true" type="tns:ConditionalStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConditionalStep" nillable="true" type="tns:ArrayOfConditionalStep" />
+  <xs:complexType name="ConditionalStep">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ConfiguredStep">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Conditions" nillable="true" type="tns:ArrayOfCondition" />
+          <xs:element minOccurs="0" name="FalseActions" nillable="true" type="tns:ArrayOfStepAction" />
+          <xs:element minOccurs="0" name="TrueActions" nillable="true" type="tns:ArrayOfStepAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConditionalStep" nillable="true" type="tns:ConditionalStep" />
+  <xs:complexType name="ConfiguredStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Index" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfiguredStep" nillable="true" type="tns:ConfiguredStep" />
+  <xs:complexType name="ArrayOfCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Condition" nillable="true" type="tns:Condition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCondition" nillable="true" type="tns:ArrayOfCondition" />
+  <xs:complexType name="Condition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlphaParameters" nillable="true" type="tns:ArrayOfAlphaValueWithThru" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="CompareType" type="q7:CompareType" />
+      <xs:element minOccurs="0" name="DecimalParameters" nillable="true" type="tns:ArrayOfDecimalValueWithThru" />
+      <xs:element minOccurs="0" name="FieldNumber" type="xs:int" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FieldType" type="q8:FieldType" />
+      <xs:element minOccurs="0" name="NumericParameters" nillable="true" type="tns:ArrayOfNumericValueWithThru" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Operation" type="q9:ConditionOperation" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="ParameterType" type="q10:RecordValueType" />
+      <xs:element minOccurs="0" name="Qualifier" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Condition" nillable="true" type="tns:Condition" />
+  <xs:complexType name="ArrayOfAlphaValueWithThru">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlphaValueWithThru" nillable="true" type="tns:AlphaValueWithThru" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlphaValueWithThru" nillable="true" type="tns:ArrayOfAlphaValueWithThru" />
+  <xs:complexType name="AlphaValueWithThru">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueThru" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlphaValueWithThru" nillable="true" type="tns:AlphaValueWithThru" />
+  <xs:complexType name="ArrayOfDecimalValueWithThru">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DecimalValueWithThru" nillable="true" type="tns:DecimalValueWithThru" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDecimalValueWithThru" nillable="true" type="tns:ArrayOfDecimalValueWithThru" />
+  <xs:complexType name="DecimalValueWithThru">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ValueThru" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DecimalValueWithThru" nillable="true" type="tns:DecimalValueWithThru" />
+  <xs:complexType name="ArrayOfNumericValueWithThru">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NumericValueWithThru" nillable="true" type="tns:NumericValueWithThru" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNumericValueWithThru" nillable="true" type="tns:ArrayOfNumericValueWithThru" />
+  <xs:complexType name="NumericValueWithThru">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" type="xs:long" />
+      <xs:element minOccurs="0" name="ValueThru" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NumericValueWithThru" nillable="true" type="tns:NumericValueWithThru" />
+  <xs:complexType name="ArrayOfStepAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StepAction" nillable="true" type="tns:StepAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStepAction" nillable="true" type="tns:ArrayOfStepAction" />
+  <xs:complexType name="StepAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionId" type="xs:short" />
+      <xs:element minOccurs="0" name="AlphaParameters" nillable="true" type="tns:ArrayOfAlphaValue" />
+      <xs:element minOccurs="0" name="DecimalParameters" nillable="true" type="tns:ArrayOfDecimalValue" />
+      <xs:element minOccurs="0" name="NumericParameters" nillable="true" type="tns:ArrayOfNumericValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StepAction" nillable="true" type="tns:StepAction" />
+  <xs:complexType name="ArrayOfAlphaValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlphaValue" nillable="true" type="tns:AlphaValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlphaValue" nillable="true" type="tns:ArrayOfAlphaValue" />
+  <xs:complexType name="AlphaValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlphaValue" nillable="true" type="tns:AlphaValue" />
+  <xs:complexType name="ArrayOfDecimalValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DecimalValue" nillable="true" type="tns:DecimalValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDecimalValue" nillable="true" type="tns:ArrayOfDecimalValue" />
+  <xs:complexType name="DecimalValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DecimalValue" nillable="true" type="tns:DecimalValue" />
+  <xs:complexType name="ArrayOfNumericValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NumericValue" nillable="true" type="tns:NumericValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNumericValue" nillable="true" type="tns:ArrayOfNumericValue" />
+  <xs:complexType name="NumericValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NumericValue" nillable="true" type="tns:NumericValue" />
+  <xs:complexType name="ArrayOfExceptionStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionStep" nillable="true" type="tns:ExceptionStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExceptionStep" nillable="true" type="tns:ArrayOfExceptionStep" />
+  <xs:complexType name="ExceptionStep">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ConfiguredStep">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExceptionId" type="xs:short" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExceptionStep" nillable="true" type="tns:ExceptionStep" />
+  <xs:complexType name="ArrayOfUnconditionalStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnconditionalStep" nillable="true" type="tns:UnconditionalStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnconditionalStep" nillable="true" type="tns:ArrayOfUnconditionalStep" />
+  <xs:complexType name="UnconditionalStep">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ConfiguredStep">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" nillable="true" type="tns:StepAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnconditionalStep" nillable="true" type="tns:UnconditionalStep" />
+  <xs:complexType name="LevelData">
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="LineOfBusiness" type="q11:LineOfBusiness" />
+      <xs:element minOccurs="0" name="Outline" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LevelData" nillable="true" type="tns:LevelData" />
+  <xs:complexType name="OutlineData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Outline" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutlineData" nillable="true" type="tns:OutlineData" />
+  <xs:complexType name="SubCategoryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" type="xs:short" />
+      <xs:element minOccurs="0" name="Outline" type="xs:short" />
+      <xs:element minOccurs="0" name="SubCategory" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubCategoryData" nillable="true" type="tns:SubCategoryData" />
+  <xs:complexType name="InquireInterpNarrativeData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpDataStatusBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InquireInterpNarrativeData" nillable="true" type="tns:InquireInterpNarrativeData" />
+  <xs:complexType name="InterpDataStatusBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpDataBase">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q12:Status" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterpDataStatusBase" nillable="true" type="tns:InterpDataStatusBase" />
+  <xs:complexType name="InquireNarrativeOutputData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpDataStatusBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EmployeeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmployeeNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="MaintenanceDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SequenceNumber" type="xs:short" />
+          <xs:element minOccurs="0" name="StatusDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InquireNarrativeOutputData" nillable="true" type="tns:InquireNarrativeOutputData" />
+  <xs:complexType name="InterpDetailData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpConfigBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfiguredSteps" nillable="true" type="tns:ConfiguredSteps" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterpDetailData" nillable="true" type="tns:InterpDetailData" />
+  <xs:complexType name="UpdateInterpNarrativeData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpDataStatusBase">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="NarrativeLines" nillable="true" type="q13:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateInterpNarrativeData" nillable="true" type="tns:UpdateInterpNarrativeData" />
+  <xs:complexType name="StatusData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterpDataBase">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="CurrentStatus" type="q14:InterpStatus" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="TargetStatus" type="q15:InterpStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StatusData" nillable="true" type="tns:StatusData" />
+</xs:schema>

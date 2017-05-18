@@ -1,0 +1,28 @@
+﻿@model Product.ConfigurableInterp.Client.Models.Action
+
+
+<div class="InterpStep StepAction" id="@ViewBag.DivActionStepID" stepcontainer="@Model.StepNumber">
+    <header id="head-@ViewBag.DivActionStepID">
+        Step @Html.DisplayTextFor(model => Model.StepNumber)
+        <div class="ActionButtons float-right">
+            <img src="~/Images/Trash_white.png" alt="Delete" class="ActionButton" id="btnStep_Exceptions_DeleteStep-@ViewBag.DivActionStepID" title="Delete Step" onclick="deleteInterpStep('@ViewBag.DivActionStepID', ' @ViewBag.DivActionStepID_Step_ @Model.StepNumber ', 'btnstep_@Html.DisplayTextFor(model => model.StepNumber)_delete_exception_1')" />
+            <img src="~/Images/Copy_white.png" alt="Copy" class="ActionButton" id="btnStep_Exceptions_CopyStep-@ViewBag.DivActionStepID" onclick="copyExceptionStep('@ViewBag.DivActionStepID_Step_@Model.StepNumber', 'btnStep_@Html.DisplayTextFor(model => Model.StepNumber)_Copy_Exception_1')" />
+            <img src="~/Images/Move_white.png" alt="Move" class="ActionButton" id="btnStep_MoveStep" title="Reorder Step" />
+        </div>
+    </header>
+    <div class="InterpContent" id="dvStep_@Html.DisplayTextFor(model => Model.StepNumber)_Exceptions">
+
+        <div id="dvStep_@Html.DisplayTextFor(model => Model.StepNumber)_EmptyExceptions" class="@ViewBag.NoActions">
+            <label class="Subtitle">Action</label>
+         </div>
+
+
+
+
+        @{Html.RenderPartial("_InterpAction", Model);}
+
+
+       
+
+    </div>
+</div>

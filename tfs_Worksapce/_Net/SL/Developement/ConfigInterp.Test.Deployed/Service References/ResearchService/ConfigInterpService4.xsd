@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.corelinksolutions.com/product/contract/configinterp/service" elementFormDefault="qualified" targetNamespace="http://schemas.corelinksolutions.com/product/contract/configinterp/service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd3" namespace="http://schemas.corelinksolutions.com/product/schema/configinterp" />
+  <xs:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" />
+  <xs:element name="CreateInterpRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q1:CreateInterpNarrativeData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterpNarrativeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q2:ArrayOfErrorItem" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q3:OperationResult" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q4:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCipInterpRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q5:DeleteCipInterpData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeInterpResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q6:ArrayOfErrorItem" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q7:OperationResult" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q8:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="LineOfBusiness" type="q9:LineOfBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescriptionCommonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Descriptions" nillable="true" type="q10:ArrayOfDescriptionCommon" />
+        <xs:element xmlns:q11="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q11:ArrayOfErrorItem" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q12:OperationResult" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q13:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActionParameterDescriptionValidationInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q14:ArrayOfActionParameterDescriptionValidationInfoData" />
+        <xs:element xmlns:q15="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q15:ArrayOfErrorItem" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q16:OperationResult" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q17:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SystemTypeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="LineOfBusiness" type="q18:LineOfBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutlineCategoryListRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="LineOfBusiness" type="q19:LineOfBusiness" />
+        <xs:element minOccurs="0" name="OutlineId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvailableOutlineCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q20:ArrayOfAvailableOutlineCategoryData" />
+        <xs:element xmlns:q21="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q21:ArrayOfErrorItem" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q22:OperationResult" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q23:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CategoryRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q24:CategoryData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q25:ArrayOfErrorItem" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q26:OperationResult" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q27:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefaultRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FieldNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Descriptions" nillable="true" type="q28:ArrayOfFieldNameData" />
+        <xs:element xmlns:q29="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q29:ArrayOfErrorItem" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q30:OperationResult" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q31:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FieldValidationInfoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FieldId" type="xs:int" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="LineOfBusiness" type="q32:LineOfBusiness" />
+        <xs:element minOccurs="0" name="TypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FieldValidationInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q33:ArrayOfFieldValidationInfoData" />
+        <xs:element xmlns:q34="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q34:ArrayOfErrorItem" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q35:OperationResult" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q36:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InquireRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q37:InquireInputData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SimpleInterpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q38:InquireSimpleOutputData" />
+        <xs:element xmlns:q39="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q39:ArrayOfErrorItem" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q40:OperationResult" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q41:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetailedInterpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q42:InterpDetailOutData" />
+        <xs:element xmlns:q43="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q43:ArrayOfErrorItem" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q44:OperationResult" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q45:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LevelRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q46:LevelData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OutlineRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q47:OutlineData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubCategoryRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q48:SubCategoryData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InquireInterpRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q49:InquireInterpNarrativeData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InquireInterpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q50:InquireNarrativeOutputData" />
+        <xs:element xmlns:q51="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Errors" nillable="true" type="q51:ArrayOfErrorItem" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="FailureReason" type="q52:OperationResult" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" minOccurs="0" name="Status" type="q53:ResponseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInterpDetailRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q54:InterpDetailData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInterpRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q55:UpdateInterpNarrativeData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatusChangeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.corelinksolutions.com/product/schema/configinterp" minOccurs="0" name="Data" nillable="true" type="q56:StatusData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

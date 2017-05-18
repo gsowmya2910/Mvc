@@ -1,0 +1,66 @@
+﻿@model Product.ConfigurableInterp.Client.Models.Action
+
+<div id="dvStep_@Html.DisplayTextFor(Model => Model.StepNumber)_Actions" class="@ViewBag.Actions">
+    <label class="InterpSubtitle" style="margin-left: 10px;">Actions(s)</label>
+    <input type="hidden" id="dvStep_@Html.DisplayTextFor(Model => Model.StepNumber)_Actions_Counter" value="1" />
+    <div id="dvStep_@Html.DisplayTextFor(Model => Model.StepNumber)_Action_1" class="Action">
+        <div class="container" style="background-color:#EBF3F8; margin: 10px; padding:10px">
+            <div class="row">
+                <div class="col-lg-12 text-left divActionParams">
+                    <div class="col-sm-2">
+                        @Html.DisplayNameFor(model => Model.SelectedResult)
+                        <br />
+                        @Html.DropDownListFor(model => Model.SelectedResult, Model.ResultsList, "-- Choose --", new { @id = "SelectedResult_"+Model.StepNumber, @class = "InterpEditDropdown form-control ddlStepResult" })
+                    </div>
+                    <div class="col-sm-3">
+                        @Html.DisplayNameFor(model => Model.SelectedActionType)
+                        <br />
+                        @Html.DropDownListFor(model => Model.SelectedActionType, Model.ActionTypesList, "-- Choose --", new { @class = "InterpEditDropdown form-control ddlStepActionType", @id = "SelectedActionType_" + Model.StepNumber, @onchange = "onStepActionTypeChange(this);" })
+                    </div>
+                    <div class="col-sm-7">
+                        @Html.DisplayNameFor(model => Model.SelectedActionName)
+                        <br />
+                        <div id="ActionStep_@Html.DisplayTextFor(x => x.StepNumber)_Container_Row_@ViewBag.RowOrder">
+                            @Html.DropDownListFor(model => Model.SelectedActionName, Enumerable.Empty<SelectListItem>(), "-- Choose--", new { @class = "InterpEditDropdown form-control ddlactions ddlStepActionName", @id = "SelectedActionName_"+Model.StepNumber, @onchange = "OnStepActionNameChange(this);" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row divLblParams">
+                <div class="col-lg-12 text-left">
+                    <div class="col-sm-2 divLabelParam " hidden="hidden" id="divParamLabel_1_@Model.StepNumber">
+                        @Html.LabelFor(model => Model.Parameter1, new { @id = "lblParameter_1_"+Model.StepNumber, @class = "lblParam" })
+                        <br />
+                        @Html.TextBoxFor(model => Model.Parameter1, new { @class = "InterpEditTextBox form-control", @id = "Parameter1", @onblur="validateStepTextbox(this)", @valueType = "0" })
+                        <span class="label-danger"></span>
+                    </div>
+                    <div class="col-sm-2 divLabelParam" hidden="hidden" id="divParamLabel_2_@Model.StepNumber">
+                        @Html.LabelFor(model => Model.Parameter2, new { @id = "lblParameter_2_" + Model.StepNumber, @class = "lblParam" })
+                        <br />
+                        @Html.TextBoxFor(model => Model.Parameter2, new { @class = "InterpEditTextBox form-control", @id = "Parameter2", @onblur="validateStepTextbox(this)", @valueType = "0" })
+                        <span class="label-danger"></span>
+                     </div>
+                    <div class="col-sm-2 divLabelParam" hidden="hidden" id="divParamLabel_3_@Model.StepNumber">
+                        @Html.LabelFor(model => Model.Parameter3, new { @id = "lblParameter_3_" + Model.StepNumber, @class = "lblParam" })
+                        <br />
+                        @Html.TextBoxFor(model => Model.Parameter3, new { @class = "InterpEditTextBox form-control", @id = "Parameter3", @onblur = "validateStepTextbox(this)", @valueType = "0" })
+                        <span class="label-danger"></span>
+                     </div>
+                    <div class="col-sm-2 divLabelParam" hidden="hidden" id="divParamLabel_4_@Model.StepNumber">
+                        @Html.LabelFor(model => Model.Parameter4, new { @id = "lblParameter_4_" + Model.StepNumber, @class = "lblParam" })
+                        <br />
+                        @Html.TextBoxFor(model => Model.Parameter4, new { @class = "InterpEditTextBox form-control", @id = "Parameter4", @onblur="validateStepTextbox(this)", @valueType = "0"  })
+                        <span class="label-danger"></span>
+                     </div>
+                    <div class="col-sm-2 divLabelParam" hidden="hidden" id="divParamLabel_5_@Model.StepNumber">
+                        @Html.LabelFor(model => Model.Parameter5, new { @id = "lblParameter_5_" + Model.StepNumber, @class = "lblParam" })
+                        <br />
+                        @Html.TextBoxFor(model => Model.Parameter5, new { @class = "InterpEditTextBox form-control", @id = "Parameter5", @onblur="validateStepTextbox(this)", @valueType = "0"  })
+                        <span class="label-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

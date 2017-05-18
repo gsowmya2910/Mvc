@@ -1,0 +1,38 @@
+﻿@model Product.ConfigurableInterp.Client.Models.Action
+
+<div class="row divLblParams">
+    <div class="col-lg-12 text-left">
+        <div class="col-sm-2 divLabelParam " id="divParamLabel_1_@Model.StepNumber">
+            @Html.LabelFor(model => Model.Parameter1, new { @id = "lblParameter_1_" + Model.StepNumber, @class = "lblParam" })
+            <br />
+            @Html.TextBoxFor(model => Model.Parameter1, new { @class = "InterpEditTextBox form-control", @id = "Parameter1", @onblur = "validateStepTextbox(this)" })
+            <span>Please enter valid input</span>
+        </div>
+        <div class="col-sm-2 divLabelParam" id="divParamLabel_2_@Model.StepNumber">
+            @Html.LabelFor(model => Model.Parameter2, new { @id = "lblParameter_2_" + Model.StepNumber, @class = "lblParam" })
+            <br />
+            @Html.TextBoxFor(model => Model.Parameter2, new { @class = "InterpEditTextBox form-control", @id = "Parameter2", @onblur = "validateStepTextbox(this)" })
+            <span>Please enter valid input</span>
+        </div>
+        <div class="col-sm-2 divLabelParam" id="divParamLabel_3_@Model.StepNumber">
+            @Html.LabelFor(model => Model.Parameter3, new { @id = "lblParameter_3_" + Model.StepNumber, @class = "lblParam" })
+            <br />
+            @Html.TextBoxFor(model => Model.Parameter3, new { @class = "InterpEditTextBox form-control", @id = "Parameter3", @onblur = "validateStepTextbox(this)" })
+            <span>Please enter valid input</span>
+        </div>
+        <div class="col-sm-2 divLabelParam" id="divParamLabel_4_@Model.StepNumber">
+            @Html.LabelFor(model => Model.Parameter4, new { @id = "lblParameter_4_" + Model.StepNumber, @class = "lblParam" })
+            <br />
+            @Html.TextBoxFor(model => Model.Parameter4, new { @class = "InterpEditTextBox form-control", @id = "Parameter4", @onblur = "validateStepTextbox(this)" })
+            <span>Please enter valid input</span>
+        </div>
+        <div class="col-sm-2 divLabelParam" id="divParamLabel_5_@Model.StepNumber">
+            @Html.LabelFor(model => Model.Parameter5, new { @id = "lblParameter_5_" + Model.StepNumber, @class = "lblParam" })
+            <br />
+            @Html.TextBoxFor(model => Model.Parameter5, new { @class = "InterpEditTextBox form-control", @id = "Parameter5", @onblur = "validateStepTextbox(this)" })
+            <span>Please enter valid input</span>
+        </div>
+    </div>
+</div>
+
+

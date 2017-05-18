@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F591BAA-1CB5-4B24-AD12-B1CD604535F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConfigInterp.Test.Deployed</RootNamespace>
+    <AssemblyName>ConfigInterp.Test.Deployed</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CoreLinkKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="DescriptionServiceTests.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="InterpNarrativeSerivceTests.cs" />
+    <Compile Include="LocalBuildUpTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\LocalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ResearchService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TestService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServiceTests.cs" />
+    <Compile Include="TestDeployTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CoreLinkKey.snk" />
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.ActionParameterDescriptionValidationInfoData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.AvailableOutlineCategoryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.DescriptionCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.ErrorItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.FieldNameData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.FieldValidationInfoData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.InquireNarrativeOutputData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.InquireSimpleOutputData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.InterpDetailOutData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.OperationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterp.Test.Deployed.LocalService.ResponseStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterpService.wsdl" />
+    <None Include="Service References\LocalService\ConfigInterpService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterpService1.wsdl" />
+    <None Include="Service References\LocalService\ConfigInterpService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterpService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterpService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterpService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterpService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\ConfigInterpService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.ActionParameterDescriptionValidationInfoData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.AvailableOutlineCategoryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.DescriptionCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.ErrorItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.FieldNameData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.FieldValidationInfoData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.InquireNarrativeOutputData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.InquireSimpleOutputData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.InterpDetailOutData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.OperationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterp.Test.Deployed.ResearchService.ResponseStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterpService.wsdl" />
+    <None Include="Service References\ResearchService\ConfigInterpService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterpService1.wsdl" />
+    <None Include="Service References\ResearchService\ConfigInterpService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterpService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterpService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterpService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResearchService\ConfigInterpService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.ActionParameterDescriptionValidationInfoData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.AvailableOutlineCategoryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.DescriptionCommon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.ErrorItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.FieldNameData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.FieldValidationInfoData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.InquireNarrativeOutputData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.InquireSimpleOutputData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.InterpDetailOutData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.OperationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterp.Test.Deployed.TestService.ResponseStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ConfigInterpService.wsdl" />
+    <None Include="Service References\TestService\ConfigInterpService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\ConfigInterpService1.wsdl" />
+    <None Include="Service References\TestService\ConfigInterpService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\ConfigInterpService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\ConfigInterpService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\ConfigInterpService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\ConfigInterpService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\ConfigInterpService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LocalService\" />
+    <WCFMetadataStorage Include="Service References\ResearchService\" />
+    <WCFMetadataStorage Include="Service References\TestService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResearchService\ConfigInterpService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResearchService\ConfigInterpService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResearchService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResearchService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResearchService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalService\ConfigInterpService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TestService\ConfigInterpService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TestService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TestService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TestService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

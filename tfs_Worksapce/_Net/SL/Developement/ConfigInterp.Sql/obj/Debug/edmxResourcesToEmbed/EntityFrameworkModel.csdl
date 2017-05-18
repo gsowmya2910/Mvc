@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CIPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CipEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="GetActionDesc" ReturnType="Collection(CIPModel.GetActionDescResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="actionTypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetActionParmDescAndValidationInfo" ReturnType="Collection(CIPModel.GetActionParmDescAndValidationInfoResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="ActionID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetActionTypeDesc" ReturnType="Collection(CIPModel.GetActionTypeDescResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAvailableOutlineCategory" ReturnType="Collection(CIPModel.GetAvailableOutlineCategoryResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="OutlineID" Mode="In" Type="Int32" />
+      <Parameter Name="CategoryID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCompareTypeDesc" ReturnType="Collection(CIPModel.GetCompareTypeDescResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="ValueTypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetConditionTypeDesc" ReturnType="Collection(CIPModel.GetConditionTypeDescResult)" />
+    <FunctionImport Name="GetExceptionDesc" ReturnType="Collection(CIPModel.GetExceptionDescResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetFieldnameDesc" ReturnType="Collection(CIPModel.GetFieldNameDescResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="FieldTypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetFieldTypeDesc" ReturnType="Collection(CIPModel.GetFieldTypeDescResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetFieldValidationInfo" ReturnType="Collection(CIPModel.GetFieldValidationInfoResult)">
+      <Parameter Name="SystemTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="FieldTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="FieldID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetActionDescResult">
+    <Property Type="Int32" Name="ActionId" Nullable="false" />
+    <Property Type="String" Name="ActionDesc" Nullable="false" MaxLength="120" />
+    <Property Type="String" Name="ActionPseudoDesc" Nullable="false" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetActionParmDescAndValidationInfoResult">
+    <Property Type="String" Name="ParamDesc" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="ValueTypeId" Nullable="false" />
+    <Property Type="Int16" Name="OrderSequence" Nullable="false" />
+    <Property Type="Int32" Name="FormatTypeId" Nullable="false" />
+    <Property Type="String" Name="FormatDesc" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="FormatInputPattern" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="FormatInputHintDesc" Nullable="true" MaxLength="20" />
+    <Property Type="Int16" Name="MinSize" Nullable="false" />
+    <Property Type="Int16" Name="MaxSize" Nullable="false" />
+    <Property Type="Boolean" Name="IsOptional" Nullable="false" />
+    <Property Type="String" Name="ParamPseudoDesc" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetActionTypeDescResult">
+    <Property Type="Int32" Name="ActionTypeId" Nullable="false" />
+    <Property Type="String" Name="ActionTypeDesc" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ActionTypePseudoDesc" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetAvailableOutlineCategoryResult">
+    <Property Type="Int32" Name="OutlineId" Nullable="false" />
+    <Property Type="Int32" Name="CategoryId" Nullable="false" />
+    <Property Type="Int32" Name="StatusId" Nullable="false" />
+    <Property Type="String" Name="PseudoCategoryLiteralDesc" Nullable="true" MaxLength="80" />
+  </ComplexType>
+  <ComplexType Name="GetCompareTypeDescResult">
+    <Property Type="Int32" Name="CompareTypeId" Nullable="false" />
+    <Property Type="String" Name="CompareTypeDesc" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="CompareTypePseudoDesc" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetConditionTypeDescResult">
+    <Property Type="Int32" Name="ConditionTypeId" Nullable="false" />
+    <Property Type="String" Name="ConditionTypeDesc" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ConditionTypePseudoDesc" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="GetExceptionDescResult">
+    <Property Type="Int32" Name="ExceptionId" Nullable="false" />
+    <Property Type="String" Name="ExceptionDesc" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ExceptionPseudoDesc" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetFieldNameDescResult">
+    <Property Type="Int64" Name="FieldId" Nullable="false" />
+    <Property Type="String" Name="FieldDesc" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="FieldPseudoDesc" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="QualifierPseudoDesc" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetFieldTypeDescResult">
+    <Property Type="Int32" Name="FieldTypeId" Nullable="false" />
+    <Property Type="String" Name="FieldTypeDesc" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FieldTypePseudoDesc" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetFieldValidationInfoResult">
+    <Property Type="Int32" Name="ValueTypeId" Nullable="false" />
+    <Property Type="Int32" Name="FormatTypeId" Nullable="false" />
+    <Property Type="String" Name="FormatDesc" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="FormatInputPattern" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="FormatInputHintDesc" Nullable="true" MaxLength="20" />
+    <Property Type="Int16" Name="MinSize" Nullable="false" />
+    <Property Type="Int16" Name="MaxSize" Nullable="false" />
+    <Property Type="Int32" Name="QualifierTypeNum" Nullable="false" />
+  </ComplexType>
+</Schema>

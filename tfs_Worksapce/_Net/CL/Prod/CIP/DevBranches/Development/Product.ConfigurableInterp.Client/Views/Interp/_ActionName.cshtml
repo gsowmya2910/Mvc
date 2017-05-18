@@ -1,0 +1,10 @@
+﻿@{
+ 
+    var fieldNameList = new List<SelectListItem>();
+
+    fieldNameList = ViewBag.ActionNameList;
+       
+ }
+
+@Html.DropDownList("FieldName", fieldNameList, string.Empty, new  { @onchange="GetParamValues(this);"})
+

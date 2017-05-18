@@ -1,0 +1,61 @@
+﻿@model Interp
+
+@{
+    ViewBag.Title = "Interp Details";
+    string encodeInterpId = Json.Encode(Model.InterpId);
+}
+
+<div class="navbar navbar-fixed-top secondHeader">
+    <div class="container">
+        <div class="navbar-header">
+
+            <div class="FormField inline-block Body">
+                @Html.LabelFor(x => x.InterpId, new { @class = " FormLabel Bold" }) // properties // first name:
+                @Html.DisplayTextFor(x => x.InterpId)// display text box
+            </div>
+            <div class="spacer-8"></div>
+            <div class="FormField inline-block Body">
+                @Html.LabelFor(x => x.Status, new { @class = " FormLabel Bold" })
+                @Html.DisplayTextFor(x => x.Status)
+            </div>
+        </div>
+
+        <div class="float-right HeaderButtons">                                                         //event
+            <a id="lnkViewInterp_Pseudocode" href="#" style="text-decoration: underline;" onclick="openPseudo(@encodeInterpId);">Preview Pseudocode</a>
+            <div class="spacer-8"></div>
+            <input id="btnEditInterp_Save" type="button" value="Save" disabled='disabled' class="SecondaryButton" onclick="saveClick(@encodeInterpId, '0');" />
+            <input id="btnEditInterp_Done" type="button" value="Done" class="PrimaryButton" onclick="doneClick(@encodeInterpId);" />
+        </div>
+    </div>
+    <div class="modal fade" id="doneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                @Html.Partial("~/Views/Interp/_SaveChanges.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("~/Views/Interp/_InterpHeaderSection.cshtml", Model)
+}
+<br />
+<div id="add_steps" class="wrapper">
+</div>
+<br />
+<div id="div_addstep" class="StepPlaceholder">
+    <h2>
+        Add Step
+    </h2>
+    <div>
+        <input id="btn_addexceptions" type="button" class="SecondaryButton" value="Add Exception" />
+        <input id="btn_addactions" type="button" class="SecondaryButton" value="Actions" onclick="btnAddAction();" />
+        <input id="btn_addconditions" type="button" class="SecondaryButton" value="Conditional Action" />
+    </div>
+</div>
+
+
+
+
+  

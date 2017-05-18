@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConfigInterp.Host.IIS</name>
+    </assembly>
+    <members>
+        <member name="T:ConfigInterp.Host.IIS.Global">
+            <summary>
+            the class
+            </summary>
+            <seealso cref="T:System.Web.HttpApplication" />
+        </member>
+        <member name="F:ConfigInterp.Host.IIS.Global._lazyContainer">
+            <summary>
+            The lazy container
+            </summary>
+        </member>
+        <member name="P:ConfigInterp.Host.IIS.Global.Container">
+            <summary>
+            Gets the container.
+            </summary>
+            <value>
+            The container.
+            </value>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.Global.Application_End(System.Object,System.EventArgs)">
+            <summary>
+            Handles the End event of the Application control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.Global.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Start event of the Application control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.Global.CreateContainer">
+            <summary>
+            Creates the container.
+            </summary>
+            <returns>the value</returns>
+        </member>
+        <member name="T:ConfigInterp.Host.IIS.UnityInstanceProvider">
+            <summary>
+            the class
+            </summary>
+            <seealso cref="T:System.ServiceModel.Dispatcher.IInstanceProvider" />
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityInstanceProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConfigInterp.Host.IIS.UnityInstanceProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityInstanceProvider.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConfigInterp.Host.IIS.UnityInstanceProvider"/> class.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="P:ConfigInterp.Host.IIS.UnityInstanceProvider.Container">
+            <summary>
+            Gets or sets the container.
+            </summary>
+            <value>
+            The container.
+            </value>
+        </member>
+        <member name="P:ConfigInterp.Host.IIS.UnityInstanceProvider.ServiceType">
+            <summary>
+            Gets or sets the type of the service.
+            </summary>
+            <value>
+            The type of the service.
+            </value>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityInstanceProvider.GetInstance(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Message)">
+            <summary>
+            Returns a service object given the specified <see cref="T:System.ServiceModel.InstanceContext" /> object.
+            </summary>
+            <param name="instanceContext">The current <see cref="T:System.ServiceModel.InstanceContext" /> object.</param>
+            <param name="message">The message that triggered the creation of a service object.</param>
+            <returns>
+            The service object.
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityInstanceProvider.GetInstance(System.ServiceModel.InstanceContext)">
+            <summary>
+            Returns a service object given the specified <see cref="T:System.ServiceModel.InstanceContext" /> object.
+            </summary>
+            <param name="instanceContext">The current <see cref="T:System.ServiceModel.InstanceContext" /> object.</param>
+            <returns>
+            A user-defined service object.
+            </returns>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityInstanceProvider.ReleaseInstance(System.ServiceModel.InstanceContext,System.Object)">
+            <summary>
+            Called when an <see cref="T:System.ServiceModel.InstanceContext" /> object recycles a service object.
+            </summary>
+            <param name="instanceContext">The service's instance context.</param>
+            <param name="instance">The service object to be recycled.</param>
+        </member>
+        <member name="T:ConfigInterp.Host.IIS.UnityServiceBehavior">
+            <summary>
+            the class
+            </summary>
+            <seealso cref="T:System.ServiceModel.Description.IServiceBehavior" />
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceBehavior.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConfigInterp.Host.IIS.UnityServiceBehavior"/> class.
+            </summary>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceBehavior.#ctor(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConfigInterp.Host.IIS.UnityServiceBehavior"/> class.
+            </summary>
+            <param name="unity">The unity.</param>
+        </member>
+        <member name="P:ConfigInterp.Host.IIS.UnityServiceBehavior.InstanceProvider">
+            <summary>
+            Gets or sets the instance provider.
+            </summary>
+            <value>
+            The instance provider.
+            </value>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Provides the ability to pass custom data to binding elements to support the contract implementation.
+            </summary>
+            <param name="serviceDescription">The service description of the service.</param>
+            <param name="serviceHostBase">The host of the service.</param>
+            <param name="endpoints">The service endpoints.</param>
+            <param name="bindingParameters">Custom objects to which binding elements have access.</param>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Provides the ability to change run-time property values or insert custom extension objects such as error handlers, message or parameter interceptors, security extensions, and other custom extension objects.
+            </summary>
+            <param name="serviceDescription">The service description.</param>
+            <param name="serviceHostBase">The host that is currently being built.</param>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Provides the ability to inspect the service host and the service description to confirm that the service can run successfully.
+            </summary>
+            <param name="serviceDescription">The service description.</param>
+            <param name="serviceHostBase">The service host that is currently being constructed.</param>
+        </member>
+        <member name="T:ConfigInterp.Host.IIS.UnityServiceHost">
+            <summary>
+            the class
+            </summary>
+            <seealso cref="T:System.ServiceModel.ServiceHost" />
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceHost.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConfigInterp.Host.IIS.UnityServiceHost"/> class.
+            </summary>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceHost.#ctor(System.Type,System.Uri[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:ConfigInterp.Host.IIS.UnityServiceHost"/> class.
+            </summary>
+            <param name="serviceType">The type of hosted service.</param>
+            <param name="baseAddresses">An array of type <see cref="T:System.Uri" /> that contains the base addresses for the hosted service.</param>
+        </member>
+        <member name="P:ConfigInterp.Host.IIS.UnityServiceHost.Container">
+            <summary>
+            Gets or sets the container.
+            </summary>
+            <value>
+            The container.
+            </value>
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceHost.OnOpening">
+            <summary>
+            Invoked during the transition of a communication object into the opening state.
+            </summary>
+        </member>
+        <member name="T:ConfigInterp.Host.IIS.UnityServiceHostFactory">
+            <summary>
+            the class
+            </summary>
+            <seealso cref="T:System.ServiceModel.Activation.ServiceHostFactory" />
+        </member>
+        <member name="M:ConfigInterp.Host.IIS.UnityServiceHostFactory.CreateServiceHost(System.Type,System.Uri[])">
+            <summary>
+            Creates a <see cref="T:System.ServiceModel.ServiceHost" /> for a specified type of service with a specific base address.
+            </summary>
+            <param name="serviceType">Specifies the type of service to host.</param>
+            <param name="baseAddresses">The <see cref="T:System.Array" /> of type <see cref="T:System.Uri" /> that contains the base addresses for the service hosted.</param>
+            <returns>
+            A <see cref="T:System.ServiceModel.ServiceHost" /> for the type of service specified with a specific base address.
+            </returns>
+        </member>
+    </members>
+</doc>

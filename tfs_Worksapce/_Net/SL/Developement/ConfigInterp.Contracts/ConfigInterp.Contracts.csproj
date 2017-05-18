@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{775F2D10-0CC5-4D53-BB55-2EE28BAAF97C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConfigInterp.Contracts</RootNamespace>
+    <AssemblyName>ConfigInterp.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\ConfigInterp.Contracts.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\ConfigInterp.Contracts.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CoreLinkKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <DocumentationFile>bin\ConfigInterp.Contracts.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreLink.Core, Version=3.0.15139.11, Culture=neutral, PublicKeyToken=e699bb424e0c0adf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Infrastructure.Core.3.0.0.0\lib\CoreLink.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.3.3.1.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Enterprise.Library.5.0\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Enterprise.Library.5.0\lib\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Enterprise.Library.5.0\lib\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.111.6.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <HintPath>..\packages\Oracle.DataAccess.2.111.6.0\lib\Oracle.DataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContracts\AlphaValue.cs" />
+    <Compile Include="DataContracts\AlphaValueWithThru.cs" />
+    <Compile Include="DataContracts\CategoryData.cs" />
+    <Compile Include="DataContracts\ActionParameterDescriptionValidationInfoData.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="DataContracts\CloneInterpNarrativeData.cs" />
+    <Compile Include="DataContracts\DeleteCipInterpData.cs" />
+    <Compile Include="DataContracts\FieldNameData.cs" />
+    <Compile Include="DataContracts\FieldTypeData.cs" />
+    <Compile Include="DataContracts\AvailableOutlineCategoryData.cs" />
+    <Compile Include="DataContracts\FieldValidationInfoData.cs" />
+    <Compile Include="DataContracts\InterpBase.cs" />
+    <Compile Include="DataContracts\OperationResult.cs" />
+    <Compile Include="DataContracts\StatusData.cs" />
+    <Compile Include="DataContracts\InterpRevisionData.cs" />
+    <Compile Include="MessageContracts\AvailableOutLineCategoryResponse.cs" />
+    <Compile Include="MessageContracts\CloneInterpRequest.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="MessageContracts\DeleteCIPInterpRequest.cs" />
+    <Compile Include="MessageContracts\DefaultRequest.cs" />
+    <Compile Include="MessageContracts\DescriptionCommonResponse.cs" />
+    <Compile Include="DataContracts\CompareType.cs" />
+    <Compile Include="DataContracts\Condition.cs" />
+    <Compile Include="DataContracts\ConditionalStep.cs" />
+    <Compile Include="DataContracts\ConditionOperation.cs" />
+    <Compile Include="DataContracts\ConfiguredSteps.cs" />
+    <Compile Include="DataContracts\CreateInterpNarrativeData.cs" />
+    <Compile Include="DataContracts\DecimalValue.cs" />
+    <Compile Include="DataContracts\DecimalValueWithThru.cs" />
+    <Compile Include="DataContracts\DeleteInterpNarrativeData.cs" />
+    <Compile Include="DataContracts\ExceptionAction.cs" />
+    <Compile Include="DataContracts\ExceptionStep.cs" />
+    <Compile Include="DataContracts\FieldType.cs" />
+    <Compile Include="DataContracts\DescriptionCommon.cs" />
+    <Compile Include="DataContracts\InterpConfigBase.cs" />
+    <Compile Include="DataContracts\InterpDetailData.cs" />
+    <Compile Include="DataContracts\InquireInterpNarrativeData.cs" />
+    <Compile Include="DataContracts\InquireNarrativeOutputData.cs" />
+    <Compile Include="DataContracts\InquireOutputDataBase.cs" />
+    <Compile Include="DataContracts\InquireSimpleOutputData.cs" />
+    <Compile Include="DataContracts\InterpDataBase.cs" />
+    <Compile Include="DataContracts\InterpDataStatusBase.cs" />
+    <Compile Include="DataContracts\InterpDetailOutData.cs" />
+    <Compile Include="DataContracts\NarrativeTypeAttribute.cs" />
+    <Compile Include="DataContracts\NumericValue.cs" />
+    <Compile Include="DataContracts\NumericValueWithThru.cs" />
+    <Compile Include="DataContracts\RecordValueType.cs" />
+    <Compile Include="DataContracts\Status.cs" />
+    <Compile Include="DataContracts\ConfiguredStep.cs" />
+    <Compile Include="DataContracts\StepAction.cs" />
+    <Compile Include="DataContracts\StepType.cs" />
+    <Compile Include="DataContracts\UnconditionalStep.cs" />
+    <Compile Include="DataContracts\UpdateInterpNarrativeData.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="DataContracts\InterpStatus.cs" />
+    <Compile Include="DataContracts\LineOfBusiness.cs" />
+    <Compile Include="MessageContracts\CategoryRequest.cs" />
+    <Compile Include="MessageContracts\ActionParameterDescriptionValidationInfoResponse.cs" />
+    <Compile Include="MessageContracts\ChangeInterpResultResponse.cs" />
+    <Compile Include="MessageContracts\CreateInterpRequest.cs" />
+    <Compile Include="MessageContracts\DetailedInterpResponse.cs" />
+    <Compile Include="MessageContracts\FieldValidationInfoRequest.cs" />
+    <Compile Include="MessageContracts\ListRequest.cs" />
+    <Compile Include="MessageContracts\FieldNameResponse.cs" />
+    <Compile Include="MessageContracts\FieldTypeRequest.cs" />
+    <Compile Include="MessageContracts\FieldValidationInfoResponse.cs" />
+    <Compile Include="MessageContracts\InquireInterpResponse.cs" />
+    <Compile Include="MessageContracts\DeleteInterpRequest.cs" />
+    <Compile Include="MessageContracts\DescriptionResponse.cs" />
+    <Compile Include="DataContracts\LevelData.cs" />
+    <Compile Include="DataContracts\ErrorItem.cs" />
+    <Compile Include="DataContracts\InquireInputData.cs" />
+    <Compile Include="MessageContracts\InquireInterpRequest.cs" />
+    <Compile Include="MessageContracts\InquireRequest.cs" />
+    <Compile Include="MessageContracts\InterpNarrativeResponse.cs" />
+    <Compile Include="MessageContracts\InterpNarrativeResponseBase.cs" />
+    <Compile Include="MessageContracts\LevelRequest.cs" />
+    <Compile Include="DataContracts\OutlineData.cs" />
+    <Compile Include="MessageContracts\OutlineCategoryListRequest.cs" />
+    <Compile Include="MessageContracts\OutlineRequest.cs" />
+    <Compile Include="DataContracts\SubCategoryData.cs" />
+    <Compile Include="DataContracts\ResponseStatus.cs" />
+    <Compile Include="MessageContracts\ResponseBase.cs" />
+    <Compile Include="DataContracts\Plan.cs" />
+    <Compile Include="MessageContracts\SimpleInterpResponse.cs" />
+    <Compile Include="MessageContracts\StatusChangeRequest.cs" />
+    <Compile Include="MessageContracts\SystemTypeRequest.cs" />
+    <Compile Include="MessageContracts\UpdateInterpDetailRequest.cs" />
+    <Compile Include="MessageContracts\UpdateInterpRequest.cs" />
+    <Compile Include="ServiceNamespaces.cs" />
+    <Compile Include="IConfigInterpService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MessageContracts\RequestHeaderBase.cs" />
+    <Compile Include="MessageContracts\SubCategoryRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CoreLinkKey.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\..\..\..\Program Files\StyleCop 4.7\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\build\CoreLink.Tasks.targets" Condition="Exists('$(SolutionDir)\build\CoreLink.Tasks.targets')" />
+  <!--<Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>-->
+</Project>

@@ -1,0 +1,63 @@
+﻿/*Drag And Drop CSS -- Start*/
+
+.wrapper { width: auto; height: auto; margin: auto; }
+.wrapper > h5 { padding: 0; margin: 0; }
+.wrapper > div { margin-bottom: 15px; border: 1px solid #aaa; }
+.item-wrapper { position: relative; padding: 3px; color: #555; display:inline-block;padding:10px 25px;}
+.item-wrapper:nth-child(even) { background-color: #f8f8f8; }
+
+.drag-handle { position: absolute;  left: 0; right: 0; top: 0; bottom: 0; cursor: move; }
+.item-container { position: relative; text-align: center; cursor: move;}
+.drop-container .item-container { cursor: default; }
+.sort-container{height:50px;}
+.sort-container .item-container { width: auto; height: auto; }
+.sort-container div{display:inline-block;}
+.item-wrapper.mx-state-moving { background-color: #fcefa1; color: #000;  }
+.drag-container .item-wrapper.mx-content-hover { background-color: #cce0ff; color: #000;}
+.drop-container.mx-content-hover { background-color: #ccff99; }
+.sort-container .drag-handle.mx-content-hover { border-color: #cce0ff; }
+.sort-container .item-wrapper.mx-content-hover { color: #000; }
+
+/*Drag And Drop CSS -- End*/
+
+
+.InterpStep {
+    border:2px solid #bebebe;
+
+}
+
+
+
+.InterpStep header {
+    color:white; 
+    padding:8px; 
+}
+
+.InterpStep.StepCondition header {
+    background-color:#0079C2; 
+}
+
+.InterpStep.StepException header {
+    background-color:#767676; 
+}
+
+.InterpStep.StepAction header {
+    background-color:#767676; 
+}
+
+.InterpContent {
+    padding:8px; 
+}
+
+.ActionButtons {
+
+}
+
+.ActionButton {
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.ActionButton.Lighten {
+    opacity: .8;
+}

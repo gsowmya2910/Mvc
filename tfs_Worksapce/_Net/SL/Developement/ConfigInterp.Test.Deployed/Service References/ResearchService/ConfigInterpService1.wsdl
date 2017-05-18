@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.corelinksolutions.com/product/contract/configinterp/service" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.corelinksolutions.com/product/contract/configinterp/service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.corelinksolutions.com/product/contract/configinterp/service/Imports">
+      <xsd:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd2" namespace="http://schemas.corelinksolutions.com/product/contract/configinterp/service" />
+      <xsd:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd5" namespace="http://corelink.com/v1.0.0/profiletransport" />
+      <xsd:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd1" namespace="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" />
+      <xsd:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd3" namespace="http://schemas.corelinksolutions.com/product/schema/configinterp" />
+      <xsd:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ConfigInterp.Contracts.DataContracts" />
+      <xsd:import schemaLocation="http://researchbbms2svc.corelinkadmin.com/ConfigInterpService/ConfigInterpService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateInterpRequest">
+    <wsdl:part name="parameters" element="tns:CreateInterpRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateInterpRequest_Headers">
+    <wsdl:part xmlns:q1="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q1:ApplicationId" />
+    <wsdl:part xmlns:q2="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q2:CorrespondenceLocation" />
+    <wsdl:part xmlns:q3="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q3:Region" />
+    <wsdl:part xmlns:q4="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q4:UnisysUsercode" />
+    <wsdl:part xmlns:q5="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q5:UserId" />
+  </wsdl:message>
+  <wsdl:message name="InterpNarrativeResponse">
+    <wsdl:part name="parameters" element="tns:InterpNarrativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_CreateInterpNarrative_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q6:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_CreateInterpNarrative_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q7:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_CreateInterpNarrative_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q8:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_CreateInterpNarrative_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q9:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCipInterpRequest">
+    <wsdl:part name="parameters" element="tns:DeleteCipInterpRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCipInterpRequest_Headers">
+    <wsdl:part xmlns:q10="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q10:ApplicationId" />
+    <wsdl:part xmlns:q11="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q11:CorrespondenceLocation" />
+    <wsdl:part xmlns:q12="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q12:Region" />
+    <wsdl:part xmlns:q13="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q13:UnisysUsercode" />
+    <wsdl:part xmlns:q14="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q14:UserId" />
+  </wsdl:message>
+  <wsdl:message name="ChangeInterpResultResponse">
+    <wsdl:part name="parameters" element="tns:ChangeInterpResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_DeleteInterp_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q15:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_DeleteInterp_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q16:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_DeleteInterp_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q17:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_DeleteInterp_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q18:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="ListRequest">
+    <wsdl:part name="parameters" element="tns:ListRequest" />
+  </wsdl:message>
+  <wsdl:message name="ListRequest_Headers">
+    <wsdl:part xmlns:q19="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q19:ApplicationId" />
+    <wsdl:part xmlns:q20="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q20:CorrespondenceLocation" />
+    <wsdl:part xmlns:q21="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q21:Region" />
+    <wsdl:part xmlns:q22="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q22:UnisysUsercode" />
+    <wsdl:part xmlns:q23="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q23:UserId" />
+  </wsdl:message>
+  <wsdl:message name="DescriptionCommonResponse">
+    <wsdl:part name="parameters" element="tns:DescriptionCommonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q24:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q25:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q26:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q27:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="ActionParameterDescriptionValidationInfoResponse">
+    <wsdl:part name="parameters" element="tns:ActionParameterDescriptionValidationInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionParameterDescriptionValidationInfo_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q28:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionParameterDescriptionValidationInfo_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q29:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionParameterDescriptionValidationInfo_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q30:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionParameterDescriptionValidationInfo_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q31:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="SystemTypeRequest">
+    <wsdl:part name="parameters" element="tns:SystemTypeRequest" />
+  </wsdl:message>
+  <wsdl:message name="SystemTypeRequest_Headers">
+    <wsdl:part xmlns:q32="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q32:ApplicationId" />
+    <wsdl:part xmlns:q33="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q33:CorrespondenceLocation" />
+    <wsdl:part xmlns:q34="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q34:Region" />
+    <wsdl:part xmlns:q35="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q35:UnisysUsercode" />
+    <wsdl:part xmlns:q36="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q36:UserId" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionTypeDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q37:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionTypeDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q38:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionTypeDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q39:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetActionTypeDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q40:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="OutlineCategoryListRequest">
+    <wsdl:part name="parameters" element="tns:OutlineCategoryListRequest" />
+  </wsdl:message>
+  <wsdl:message name="OutlineCategoryListRequest_Headers">
+    <wsdl:part xmlns:q41="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q41:ApplicationId" />
+    <wsdl:part xmlns:q42="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q42:CorrespondenceLocation" />
+    <wsdl:part xmlns:q43="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q43:Region" />
+    <wsdl:part xmlns:q44="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q44:UnisysUsercode" />
+    <wsdl:part xmlns:q45="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q45:UserId" />
+  </wsdl:message>
+  <wsdl:message name="AvailableOutlineCategoryResponse">
+    <wsdl:part name="parameters" element="tns:AvailableOutlineCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetAvailableOutlineCategory_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q46:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetAvailableOutlineCategory_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q47:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetAvailableOutlineCategory_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q48:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetAvailableOutlineCategory_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q49:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="CategoryRequest">
+    <wsdl:part name="parameters" element="tns:CategoryRequest" />
+  </wsdl:message>
+  <wsdl:message name="CategoryRequest_Headers">
+    <wsdl:part xmlns:q50="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q50:ApplicationId" />
+    <wsdl:part xmlns:q51="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q51:CorrespondenceLocation" />
+    <wsdl:part xmlns:q52="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q52:Region" />
+    <wsdl:part xmlns:q53="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q53:UnisysUsercode" />
+    <wsdl:part xmlns:q54="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q54:UserId" />
+  </wsdl:message>
+  <wsdl:message name="DescriptionResponse">
+    <wsdl:part name="parameters" element="tns:DescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetCategoryDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q55:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetCategoryDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q56:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetCategoryDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q57:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetCategoryDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q58:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetCompareTypeDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q59:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetCompareTypeDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q60:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetCompareTypeDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q61:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetCompareTypeDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q62:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="DefaultRequest">
+    <wsdl:part name="parameters" element="tns:DefaultRequest" />
+  </wsdl:message>
+  <wsdl:message name="DefaultRequest_Headers">
+    <wsdl:part xmlns:q63="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q63:ApplicationId" />
+    <wsdl:part xmlns:q64="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q64:CorrespondenceLocation" />
+    <wsdl:part xmlns:q65="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q65:Region" />
+    <wsdl:part xmlns:q66="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q66:UnisysUsercode" />
+    <wsdl:part xmlns:q67="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q67:UserId" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetConditionTypeDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q68:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetConditionTypeDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q69:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetConditionTypeDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q70:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetConditionTypeDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q71:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetExceptionDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q72:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetExceptionDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q73:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetExceptionDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q74:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetExceptionDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q75:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="FieldNameResponse">
+    <wsdl:part name="parameters" element="tns:FieldNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldNameDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q76:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldNameDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q77:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldNameDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q78:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldNameDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q79:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldTypeDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q80:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldTypeDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q81:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldTypeDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q82:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldTypeDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q83:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="FieldValidationInfoRequest">
+    <wsdl:part name="parameters" element="tns:FieldValidationInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="FieldValidationInfoRequest_Headers">
+    <wsdl:part xmlns:q84="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q84:ApplicationId" />
+    <wsdl:part xmlns:q85="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q85:CorrespondenceLocation" />
+    <wsdl:part xmlns:q86="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q86:Region" />
+    <wsdl:part xmlns:q87="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q87:UnisysUsercode" />
+    <wsdl:part xmlns:q88="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q88:UserId" />
+  </wsdl:message>
+  <wsdl:message name="FieldValidationInfoResponse">
+    <wsdl:part name="parameters" element="tns:FieldValidationInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldValidationInfo_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q89="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q89:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldValidationInfo_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q90:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldValidationInfo_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q91="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q91:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetFieldValidationInfo_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q92:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="InquireRequest">
+    <wsdl:part name="parameters" element="tns:InquireRequest" />
+  </wsdl:message>
+  <wsdl:message name="InquireRequest_Headers">
+    <wsdl:part xmlns:q93="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q93:ApplicationId" />
+    <wsdl:part xmlns:q94="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q94:CorrespondenceLocation" />
+    <wsdl:part xmlns:q95="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q95:Region" />
+    <wsdl:part xmlns:q96="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q96:UnisysUsercode" />
+    <wsdl:part xmlns:q97="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q97:UserId" />
+  </wsdl:message>
+  <wsdl:message name="SimpleInterpResponse">
+    <wsdl:part name="parameters" element="tns:SimpleInterpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetInterp_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q98="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q98:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetInterp_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q99="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q99:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetInterp_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q100="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q100:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetInterp_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q101="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q101:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="DetailedInterpResponse">
+    <wsdl:part name="parameters" element="tns:DetailedInterpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetInterpDetail_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q102="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q102:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetInterpDetail_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q103="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q103:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetInterpDetail_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q104="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q104:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetInterpDetail_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q105="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q105:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="LevelRequest">
+    <wsdl:part name="parameters" element="tns:LevelRequest" />
+  </wsdl:message>
+  <wsdl:message name="LevelRequest_Headers">
+    <wsdl:part xmlns:q106="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q106:ApplicationId" />
+    <wsdl:part xmlns:q107="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q107:CorrespondenceLocation" />
+    <wsdl:part xmlns:q108="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q108:Region" />
+    <wsdl:part xmlns:q109="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q109:UnisysUsercode" />
+    <wsdl:part xmlns:q110="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q110:UserId" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetLevelDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q111="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q111:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetLevelDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q112="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q112:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetLevelDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q113="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q113:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetLevelDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q114="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q114:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="OutlineRequest">
+    <wsdl:part name="parameters" element="tns:OutlineRequest" />
+  </wsdl:message>
+  <wsdl:message name="OutlineRequest_Headers">
+    <wsdl:part xmlns:q115="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q115:ApplicationId" />
+    <wsdl:part xmlns:q116="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q116:CorrespondenceLocation" />
+    <wsdl:part xmlns:q117="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q117:Region" />
+    <wsdl:part xmlns:q118="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q118:UnisysUsercode" />
+    <wsdl:part xmlns:q119="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q119:UserId" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetOutlineDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q120="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q120:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetOutlineDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q121="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q121:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetOutlineDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q122="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q122:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetOutlineDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q123="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q123:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="SubCategoryRequest">
+    <wsdl:part name="parameters" element="tns:SubCategoryRequest" />
+  </wsdl:message>
+  <wsdl:message name="SubCategoryRequest_Headers">
+    <wsdl:part xmlns:q124="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q124:ApplicationId" />
+    <wsdl:part xmlns:q125="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q125:CorrespondenceLocation" />
+    <wsdl:part xmlns:q126="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q126:Region" />
+    <wsdl:part xmlns:q127="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q127:UnisysUsercode" />
+    <wsdl:part xmlns:q128="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q128:UserId" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetSubCategoryDescription_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q129="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q129:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetSubCategoryDescription_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q130="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q130:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetSubCategoryDescription_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q131="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q131:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_GetSubCategoryDescription_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q132="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q132:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="InquireInterpRequest">
+    <wsdl:part name="parameters" element="tns:InquireInterpRequest" />
+  </wsdl:message>
+  <wsdl:message name="InquireInterpRequest_Headers">
+    <wsdl:part xmlns:q133="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q133:ApplicationId" />
+    <wsdl:part xmlns:q134="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q134:CorrespondenceLocation" />
+    <wsdl:part xmlns:q135="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q135:Region" />
+    <wsdl:part xmlns:q136="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q136:UnisysUsercode" />
+    <wsdl:part xmlns:q137="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q137:UserId" />
+  </wsdl:message>
+  <wsdl:message name="InquireInterpResponse">
+    <wsdl:part name="parameters" element="tns:InquireInterpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_InquireInterpNarrative_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q138="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q138:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_InquireInterpNarrative_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q139="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q139:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_InquireInterpNarrative_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q140="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q140:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_InquireInterpNarrative_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q141="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q141:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInterpDetailRequest">
+    <wsdl:part name="parameters" element="tns:UpdateInterpDetailRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInterpDetailRequest_Headers">
+    <wsdl:part xmlns:q142="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q142:ApplicationId" />
+    <wsdl:part xmlns:q143="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q143:CorrespondenceLocation" />
+    <wsdl:part xmlns:q144="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q144:Region" />
+    <wsdl:part xmlns:q145="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q145:UnisysUsercode" />
+    <wsdl:part xmlns:q146="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q146:UserId" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpConfig_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q147="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q147:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpConfig_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q148="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q148:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpConfig_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q149="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q149:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpConfig_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q150="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q150:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInterpRequest">
+    <wsdl:part name="parameters" element="tns:UpdateInterpRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInterpRequest_Headers">
+    <wsdl:part xmlns:q151="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q151:ApplicationId" />
+    <wsdl:part xmlns:q152="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q152:CorrespondenceLocation" />
+    <wsdl:part xmlns:q153="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q153:Region" />
+    <wsdl:part xmlns:q154="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q154:UnisysUsercode" />
+    <wsdl:part xmlns:q155="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q155:UserId" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpNarrative_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q156="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q156:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpNarrative_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q157="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q157:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpNarrative_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q158="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q158:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpNarrative_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q159="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q159:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="StatusChangeRequest">
+    <wsdl:part name="parameters" element="tns:StatusChangeRequest" />
+  </wsdl:message>
+  <wsdl:message name="StatusChangeRequest_Headers">
+    <wsdl:part xmlns:q160="http://corelink.com/v1.0.0/profiletransport" name="ApplicationId" element="q160:ApplicationId" />
+    <wsdl:part xmlns:q161="http://corelink.com/v1.0.0/profiletransport" name="CorrespondenceLocation" element="q161:CorrespondenceLocation" />
+    <wsdl:part xmlns:q162="http://corelink.com/v1.0.0/profiletransport" name="Region" element="q162:Region" />
+    <wsdl:part xmlns:q163="http://corelink.com/v1.0.0/profiletransport" name="UnisysUsercode" element="q163:UnisysUsercode" />
+    <wsdl:part xmlns:q164="http://corelink.com/v1.0.0/profiletransport" name="UserId" element="q164:UserId" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpStatus_BusinessFaultFault_FaultMessage">
+    <wsdl:part xmlns:q165="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q165:BusinessFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpStatus_ServiceUnavailableFaultFault_FaultMessage">
+    <wsdl:part xmlns:q166="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q166:ServiceUnavailableFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpStatus_UnhandledExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q167="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q167:UnhandledExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IConfigInterpService_UpdateInterpStatus_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q168="http://schemas.corelinksolutions.com/infrastructure/schema/coremessages/v1" name="detail" element="q168:ValidationFault" />
+  </wsdl:message>
+  <wsdl:portType name="IConfigInterpService">
+    <wsdl:operation name="CreateInterpNarrative">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/CreateInterpNarrative" name="CreateInterpRequest" message="tns:CreateInterpRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/CreateInterpNarrativeResponse" name="InterpNarrativeResponse" message="tns:InterpNarrativeResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/CreateInterpNarrativeBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_CreateInterpNarrative_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/CreateInterpNarrativeServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_CreateInterpNarrative_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/CreateInterpNarrativeUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_CreateInterpNarrative_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/CreateInterpNarrativeValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_CreateInterpNarrative_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInterp">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/DeleteInterp" name="DeleteCipInterpRequest" message="tns:DeleteCipInterpRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/DeleteInterpResponse" name="ChangeInterpResultResponse" message="tns:ChangeInterpResultResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/DeleteInterpBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_DeleteInterp_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/DeleteInterpServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_DeleteInterp_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/DeleteInterpUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_DeleteInterp_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/DeleteInterpValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_DeleteInterp_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionDescription" name="ListRequest" message="tns:ListRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionDescriptionResponse" name="DescriptionCommonResponse" message="tns:DescriptionCommonResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetActionDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetActionDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetActionDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetActionDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionParameterDescriptionValidationInfo">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionParameterDescriptionValidationInfo" name="ListRequest" message="tns:ListRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionParameterDescriptionValidationInfoResponse" name="ActionParameterDescriptionValidationInfoResponse" message="tns:ActionParameterDescriptionValidationInfoResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionParameterDescriptionValidationInfoBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetActionParameterDescriptionValidationInfo_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionParameterDescriptionValidationInfoServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetActionParameterDescriptionValidationInfo_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionParameterDescriptionValidationInfoUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetActionParameterDescriptionValidationInfo_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionParameterDescriptionValidationInfoValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetActionParameterDescriptionValidationInfo_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionTypeDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionTypeDescription" name="SystemTypeRequest" message="tns:SystemTypeRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionTypeDescriptionResponse" name="DescriptionCommonResponse" message="tns:DescriptionCommonResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionTypeDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetActionTypeDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionTypeDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetActionTypeDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionTypeDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetActionTypeDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetActionTypeDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetActionTypeDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableOutlineCategory">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetAvailableOutlineCategory" name="OutlineCategoryListRequest" message="tns:OutlineCategoryListRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetAvailableOutlineCategoryResponse" name="AvailableOutlineCategoryResponse" message="tns:AvailableOutlineCategoryResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetAvailableOutlineCategoryBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetAvailableOutlineCategory_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetAvailableOutlineCategoryServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetAvailableOutlineCategory_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetAvailableOutlineCategoryUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetAvailableOutlineCategory_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetAvailableOutlineCategoryValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetAvailableOutlineCategory_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCategoryDescription" name="CategoryRequest" message="tns:CategoryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCategoryDescriptionResponse" name="DescriptionResponse" message="tns:DescriptionResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCategoryDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetCategoryDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCategoryDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetCategoryDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCategoryDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetCategoryDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCategoryDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetCategoryDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompareTypeDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCompareTypeDescription" name="ListRequest" message="tns:ListRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCompareTypeDescriptionResponse" name="DescriptionCommonResponse" message="tns:DescriptionCommonResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCompareTypeDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetCompareTypeDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCompareTypeDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetCompareTypeDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCompareTypeDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetCompareTypeDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetCompareTypeDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetCompareTypeDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConditionTypeDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetConditionTypeDescription" name="DefaultRequest" message="tns:DefaultRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetConditionTypeDescriptionResponse" name="DescriptionCommonResponse" message="tns:DescriptionCommonResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetConditionTypeDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetConditionTypeDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetConditionTypeDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetConditionTypeDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetConditionTypeDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetConditionTypeDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetConditionTypeDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetConditionTypeDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExceptionDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetExceptionDescription" name="SystemTypeRequest" message="tns:SystemTypeRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetExceptionDescriptionResponse" name="DescriptionCommonResponse" message="tns:DescriptionCommonResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetExceptionDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetExceptionDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetExceptionDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetExceptionDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetExceptionDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetExceptionDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetExceptionDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetExceptionDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldNameDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldNameDescription" name="ListRequest" message="tns:ListRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldNameDescriptionResponse" name="FieldNameResponse" message="tns:FieldNameResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldNameDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetFieldNameDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldNameDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetFieldNameDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldNameDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetFieldNameDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldNameDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetFieldNameDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldTypeDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldTypeDescription" name="SystemTypeRequest" message="tns:SystemTypeRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldTypeDescriptionResponse" name="DescriptionCommonResponse" message="tns:DescriptionCommonResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldTypeDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetFieldTypeDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldTypeDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetFieldTypeDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldTypeDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetFieldTypeDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldTypeDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetFieldTypeDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldValidationInfo">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldValidationInfo" name="FieldValidationInfoRequest" message="tns:FieldValidationInfoRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldValidationInfoResponse" name="FieldValidationInfoResponse" message="tns:FieldValidationInfoResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldValidationInfoBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetFieldValidationInfo_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldValidationInfoServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetFieldValidationInfo_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldValidationInfoUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetFieldValidationInfo_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetFieldValidationInfoValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetFieldValidationInfo_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterp">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterp" name="InquireRequest" message="tns:InquireRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpResponse" name="SimpleInterpResponse" message="tns:SimpleInterpResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetInterp_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetInterp_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetInterp_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetInterp_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterpDetail">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpDetail" name="InquireRequest" message="tns:InquireRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpDetailResponse" name="DetailedInterpResponse" message="tns:DetailedInterpResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpDetailBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetInterpDetail_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpDetailServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetInterpDetail_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpDetailUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetInterpDetail_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetInterpDetailValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetInterpDetail_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLevelDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetLevelDescription" name="LevelRequest" message="tns:LevelRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetLevelDescriptionResponse" name="DescriptionResponse" message="tns:DescriptionResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetLevelDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetLevelDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetLevelDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetLevelDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetLevelDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetLevelDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetLevelDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetLevelDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutlineDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetOutlineDescription" name="OutlineRequest" message="tns:OutlineRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetOutlineDescriptionResponse" name="DescriptionResponse" message="tns:DescriptionResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetOutlineDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetOutlineDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetOutlineDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetOutlineDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetOutlineDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetOutlineDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetOutlineDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetOutlineDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategoryDescription">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetSubCategoryDescription" name="SubCategoryRequest" message="tns:SubCategoryRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetSubCategoryDescriptionResponse" name="DescriptionResponse" message="tns:DescriptionResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetSubCategoryDescriptionBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_GetSubCategoryDescription_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetSubCategoryDescriptionServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_GetSubCategoryDescription_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetSubCategoryDescriptionUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_GetSubCategoryDescription_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/GetSubCategoryDescriptionValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_GetSubCategoryDescription_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InquireInterpNarrative">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/InquireInterpNarrative" name="InquireInterpRequest" message="tns:InquireInterpRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/InquireInterpNarrativeResponse" name="InquireInterpResponse" message="tns:InquireInterpResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/InquireInterpNarrativeBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_InquireInterpNarrative_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/InquireInterpNarrativeServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_InquireInterpNarrative_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/InquireInterpNarrativeUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_InquireInterpNarrative_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/InquireInterpNarrativeValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_InquireInterpNarrative_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInterpConfig">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpConfig" name="UpdateInterpDetailRequest" message="tns:UpdateInterpDetailRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpConfigResponse" name="ChangeInterpResultResponse" message="tns:ChangeInterpResultResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpConfigBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_UpdateInterpConfig_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpConfigServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_UpdateInterpConfig_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpConfigUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_UpdateInterpConfig_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpConfigValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_UpdateInterpConfig_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInterpNarrative">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpNarrative" name="UpdateInterpRequest" message="tns:UpdateInterpRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpNarrativeResponse" name="InterpNarrativeResponse" message="tns:InterpNarrativeResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpNarrativeBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_UpdateInterpNarrative_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpNarrativeServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_UpdateInterpNarrative_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpNarrativeUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_UpdateInterpNarrative_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpNarrativeValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_UpdateInterpNarrative_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInterpStatus">
+      <wsdl:input wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpStatus" name="StatusChangeRequest" message="tns:StatusChangeRequest" />
+      <wsdl:output wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpStatusResponse" name="ChangeInterpResultResponse" message="tns:ChangeInterpResultResponse" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpStatusBusinessFaultFault" name="BusinessFaultFault" message="tns:IConfigInterpService_UpdateInterpStatus_BusinessFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpStatusServiceUnavailableFaultFault" name="ServiceUnavailableFaultFault" message="tns:IConfigInterpService_UpdateInterpStatus_ServiceUnavailableFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpStatusUnhandledExceptionFaultFault" name="UnhandledExceptionFaultFault" message="tns:IConfigInterpService_UpdateInterpStatus_UnhandledExceptionFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.corelinksolutions.com/product/contract/configinterp/service/IConfigInterpService/UpdateInterpStatusValidationFaultFault" name="ValidationFaultFault" message="tns:IConfigInterpService_UpdateInterpStatus_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

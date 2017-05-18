@@ -1,0 +1,42 @@
+﻿<?xml version="1.0"?>
+<!-- Documentation for all options located here "http://docs.nuget.org/docs/reference/nuspec-reference" -->
+<package>
+  <metadata>
+    <!-- The unique identifier for the package. This is the package name that is shown when packages are listed using the Package Manager Console. -->
+    <!-- ex Infrastructure.CurrentApplicationProfile -->
+    <id>Product.ConfigurableInterp.Client</id>
+
+    <!-- Version Number Format Major.SP or Minor #.HotFix-->
+    <version>1.0.2.6</version>
+
+    <!--The human-friendly title of the package displayed in the Manage NuGet Packages dialog. If none is specified, the ID is used instead.-->
+    <title>Product Configurable Interp Client</title>
+
+    <!--This is who created the Package-->
+    <authors>Swaroop Kesavapatnam</authors>
+
+    <!--Do not update these 2 entries-->
+    <owners>Corelink Solutions</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <!--A long description of the package. This shows up in the right pane of the Add Package Dialog as well as in the Package Manager Console when listing packages using the Get-Package command. -->
+    <description>Product.ConfigurableInterp.Client</description>
+
+    <!--Summary of  changes made in this release of the package.-->
+    <releaseNotes></releaseNotes>
+
+    <!--Update the Year-->
+    <copyright>Copyright Corelink Solutions 2016</copyright>
+
+    <!--A space-delimited list of tags and keywords that describe the package. This information is used to help make sure users can find the package using searches in the Add Package Reference dialog box or filtering in the Package Manager Console window.-->
+    <tags>Product Configurable Interp Client</tags>
+
+    <!-- The list of dependencies for the package -->
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <!--  Add the files for the package here -->
+  <files>
+    <file src="_PublishedWebsites\Product.ConfigurableInterp.Client\**\*.*" target="Content" exclude="_PublishedWebsites\Product.ConfigurableInterp.Client\**\*.xml" />
+  </files>
+</package>

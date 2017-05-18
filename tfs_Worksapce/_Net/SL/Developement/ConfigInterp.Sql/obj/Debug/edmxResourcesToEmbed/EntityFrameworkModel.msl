@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CIPModelStoreContainer" CdmEntityContainer="CipEntities">
+    <FunctionImportMapping FunctionImportName="GetActionDesc" FunctionName="CIPModel.Store.GetActionDesc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetActionDescResult">
+          <ScalarProperty Name="ActionId" ColumnName="actionID" />
+          <ScalarProperty Name="ActionDesc" ColumnName="actionDesc" />
+          <ScalarProperty Name="ActionPseudoDesc" ColumnName="actionPseudoDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetActionParmDescAndValidationInfo" FunctionName="CIPModel.Store.GetActionParmDescAndValidationInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetActionParmDescAndValidationInfoResult">
+          <ScalarProperty Name="ParamDesc" ColumnName="parmDesc" />
+          <ScalarProperty Name="ValueTypeId" ColumnName="valueTypeID" />
+          <ScalarProperty Name="OrderSequence" ColumnName="orderSequence" />
+          <ScalarProperty Name="FormatTypeId" ColumnName="formatTypeID" />
+          <ScalarProperty Name="FormatDesc" ColumnName="formatDesc" />
+          <ScalarProperty Name="FormatInputPattern" ColumnName="formatInputPattern" />
+          <ScalarProperty Name="FormatInputHintDesc" ColumnName="formatInputHintDesc" />
+          <ScalarProperty Name="MinSize" ColumnName="minSize" />
+          <ScalarProperty Name="MaxSize" ColumnName="maxSize" />
+          <ScalarProperty Name="IsOptional" ColumnName="isOptional" />
+          <ScalarProperty Name="ParamPseudoDesc" ColumnName="parmPseudoDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetActionTypeDesc" FunctionName="CIPModel.Store.GetActionTypeDesc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetActionTypeDescResult">
+          <ScalarProperty Name="ActionTypeId" ColumnName="actionTypeID" />
+          <ScalarProperty Name="ActionTypeDesc" ColumnName="actionTypeDesc" />
+          <ScalarProperty Name="ActionTypePseudoDesc" ColumnName="actionTypePseudoDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAvailableOutlineCategory" FunctionName="CIPModel.Store.GetAvailableOutlineCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetAvailableOutlineCategoryResult">
+          <ScalarProperty Name="OutlineId" ColumnName="outlineID" />
+          <ScalarProperty Name="CategoryId" ColumnName="categoryID" />
+          <ScalarProperty Name="StatusId" ColumnName="statusID" />
+          <ScalarProperty Name="PseudoCategoryLiteralDesc" ColumnName="pseudoCategoryLiteralDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCompareTypeDesc" FunctionName="CIPModel.Store.GetCompareTypeDesc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetCompareTypeDescResult">
+          <ScalarProperty Name="CompareTypeId" ColumnName="compareTypeID" />
+          <ScalarProperty Name="CompareTypeDesc" ColumnName="compareTypeDesc" />
+          <ScalarProperty Name="CompareTypePseudoDesc" ColumnName="compareTypePseudoDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetConditionTypeDesc" FunctionName="CIPModel.Store.GetConditionTypeDesc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetConditionTypeDescResult">
+          <ScalarProperty Name="ConditionTypeId" ColumnName="conditionTypeID" />
+          <ScalarProperty Name="ConditionTypeDesc" ColumnName="conditionTypeDesc" />
+          <ScalarProperty Name="ConditionTypePseudoDesc" ColumnName="conditionTypePseudoDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetExceptionDesc" FunctionName="CIPModel.Store.GetExceptionDesc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetExceptionDescResult">
+          <ScalarProperty Name="ExceptionId" ColumnName="exceptionID" />
+          <ScalarProperty Name="ExceptionDesc" ColumnName="exceptionDesc" />
+          <ScalarProperty Name="ExceptionPseudoDesc" ColumnName="exceptionPseudoDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetFieldnameDesc" FunctionName="CIPModel.Store.GetFieldNameDesc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetFieldNameDescResult">
+          <ScalarProperty Name="FieldId" ColumnName="fieldID" />
+          <ScalarProperty Name="FieldDesc" ColumnName="fieldDesc" />
+          <ScalarProperty Name="FieldPseudoDesc" ColumnName="fieldPseudoDesc" />
+          <ScalarProperty Name="QualifierPseudoDesc" ColumnName="qualifierPseudoDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetFieldTypeDesc" FunctionName="CIPModel.Store.GetFieldTypeDesc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetFieldTypeDescResult">
+          <ScalarProperty Name="FieldTypeId" ColumnName="fieldTypeID" />
+          <ScalarProperty Name="FieldTypeDesc" ColumnName="fieldTypeDesc" />
+          <ScalarProperty Name="FieldTypePseudoDesc" ColumnName="fieldTypePseudoDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetFieldValidationInfo" FunctionName="CIPModel.Store.GetFieldValidationInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CIPModel.GetFieldValidationInfoResult">
+          <ScalarProperty Name="ValueTypeId" ColumnName="valueTypeID" />
+          <ScalarProperty Name="FormatTypeId" ColumnName="formatTypeID" />
+          <ScalarProperty Name="FormatDesc" ColumnName="formatDesc" />
+          <ScalarProperty Name="FormatInputPattern" ColumnName="formatInputPattern" />
+          <ScalarProperty Name="FormatInputHintDesc" ColumnName="formatInputHintDesc" />
+          <ScalarProperty Name="MinSize" ColumnName="minSize" />
+          <ScalarProperty Name="MaxSize" ColumnName="maxSize" />
+          <ScalarProperty Name="QualifierTypeNum" ColumnName="qualifierTypeNum" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

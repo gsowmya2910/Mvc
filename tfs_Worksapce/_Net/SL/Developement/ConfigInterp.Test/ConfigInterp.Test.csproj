@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FCD82EE-BEC5-4486-A9B7-0DA30BF5D0D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConfigInterp.Test</RootNamespace>
+    <AssemblyName>ConfigInterp.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CoreLinkKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LOCALDEVBUILD</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BMNARR01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e699bb424e0c0adf, processorArchitecture=MSIL">
+      <HintPath>..\packages\TI.BMNARR.1.0.0\lib\BMNARR01.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CIPINQ01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e699bb424e0c0adf, processorArchitecture=MSIL">
+      <HintPath>..\packages\TI.CIPINQ01.1.0.9\lib\CIPINQ01.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CIPUPD01, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e699bb424e0c0adf, processorArchitecture=MSIL">
+      <HintPath>..\packages\TI.CIPUPD01.1.0.5\lib\CIPUPD01.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreLink.Core, Version=3.0.15139.11, Culture=neutral, PublicKeyToken=e699bb424e0c0adf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Infrastructure.Core.3.0.0.0\lib\CoreLink.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreLink.DescriptionMaster.DA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e699bb424e0c0adf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Infrastructure.DescriptionMaster.DA.1.0.0.0\lib\CoreLink.DescriptionMaster.DA.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreLink.Infrastructure.Behaviors, Version=1.0.0.0, Culture=neutral, PublicKeyToken=994f355ad6e0a920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Infrastructure.Behaviors.1.0.0.0\lib\CoreLink.Infrastructure.Behaviors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreLink.Infrastructure.Security, Version=1.0.0.0, Culture=neutral, PublicKeyToken=994f355ad6e0a920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Infrastructure.Security.1.0.0.0\lib\CoreLink.Infrastructure.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreLinkAdmin.Common.Utility.CommonUtility, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e699bb424e0c0adf, processorArchitecture=MSIL">
+      <HintPath>..\packages\Infrastructure.CommonUtility.1.0.0.0\lib\CoreLinkAdmin.Common.Utility.CommonUtility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CSDCM05, Version=5.0.0.0, Culture=neutral, PublicKeyToken=e699bb424e0c0adf, processorArchitecture=MSIL">
+      <HintPath>..\packages\TI.CSDCM.5.0.0\lib\CSDCM05.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.3.3.1.40000\lib\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.HostIntegration.TI.ClientContext">
+      <HintPath>..\packages\Microsoft.HostIntegration.TI.ClientContext.8.0.3608.0\lib\Microsoft.HostIntegration.TI.ClientContext.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Enterprise.Library.5.0\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Enterprise.Library.5.0\lib\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Enterprise.Library.5.0\lib\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.111.6.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <HintPath>..\packages\Oracle.DataAccess.2.111.6.0\lib\Oracle.DataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AssemblyTests.cs" />
+    <Compile Include="BootstrapperTests.cs" />
+    <Compile Include="Integration\LocalDevelopmentSetupTests.cs" />
+    <Compile Include="Mocks\MockValidation.cs" />
+    <Compile Include="TestUtilities\EqualityChecker.cs" />
+    <Compile Include="Mocks\MockBenefitMatrix.cs" />
+    <Compile Include="NarrativeTypeAttributeTests.cs" />
+    <Compile Include="ErrorItemTests.cs" />
+    <Compile Include="Integration\BenefitMatrixHandlerIntegrationTests.cs" />
+    <Compile Include="Integration\CipInquireHandlerIntegrationTests.cs" />
+    <Compile Include="Integration\ConfigInterpServiceCipInquireIntegrationTests.cs" />
+    <Compile Include="Integration\ConfigInterpServiceCipUpdateIntegrationTests.cs" />
+    <Compile Include="ConfigInterpServiceTests.cs" />
+    <Compile Include="ConverterTests.cs" />
+    <Compile Include="DescriptionMasterHandlerTests.cs" />
+    <Compile Include="BuildValidationTests.cs" />
+    <Compile Include="Integration\DescriptionMasterIntegrationDataTests.cs" />
+    <Compile Include="Mocks\MockDataAccess.cs" />
+    <Compile Include="Mocks\MockDataBase.cs" />
+    <Compile Include="Mocks\DescriptionMock.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="InquireDataResultBaseTest.cs" />
+    <Compile Include="CipInquireHandlerTests.cs" />
+    <Compile Include="Mocks\InquireMock.cs" />
+    <Compile Include="Mocks\MockSimpleInquireResult.cs" />
+    <Compile Include="Mocks\MockInquire.cs" />
+    <Compile Include="Integration\SqlIntegrationTests.cs" />
+    <Compile Include="StepConverterTests.cs" />
+    <Compile Include="StepDataMapTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanityTests.cs" />
+    <Compile Include="Mocks\UpdateMock.cs" />
+    <Compile Include="TestUtilities\TestDump.cs" />
+    <Compile Include="CipUpdateHandlerTests.cs" />
+    <Compile Include="Mocks\TestMap.cs" />
+    <Compile Include="UnityServiceHostTests.cs" />
+    <Compile Include="UtilitiesTests.cs" />
+    <Compile Include="ValidationTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigInterp.Bl\ConfigInterp.Bl.csproj">
+      <Project>{47D40815-EDF7-4EC7-B510-EC40A5BA5AC9}</Project>
+      <Name>ConfigInterp.Bl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigInterp.Contracts\ConfigInterp.Contracts.csproj">
+      <Project>{775F2D10-0CC5-4D53-BB55-2EE28BAAF97C}</Project>
+      <Name>ConfigInterp.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigInterp.Host.IIS\ConfigInterp.Host.IIS.csproj">
+      <Project>{37efd5be-b9af-4769-86a9-039ddf29e213}</Project>
+      <Name>ConfigInterp.Host.IIS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigInterp.ServiceLibrary\ConfigInterp.ServiceLibrary.csproj">
+      <Project>{24828B36-009E-4A6B-847D-717403F36932}</Project>
+      <Name>ConfigInterp.ServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigInterp.Sql\ConfigInterp.Sql.csproj">
+      <Project>{e6af3d17-79a8-45c1-8992-2d7698ff2fda}</Project>
+      <Name>ConfigInterp.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigInterp.Unity\ConfigInterp.Unity.csproj">
+      <Project>{658ca36e-164e-4f73-9a83-cd782105e6bb}</Project>
+      <Name>ConfigInterp.Unity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CoreLinkKey.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\build\CoreLink.Tasks.targets" Condition="Exists('$(SolutionDir)\build\CoreLink.Tasks.targets')" />
+  <!--<Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>-->
+</Project>

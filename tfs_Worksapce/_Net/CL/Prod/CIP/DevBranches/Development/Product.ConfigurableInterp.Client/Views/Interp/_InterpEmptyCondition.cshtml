@@ -1,0 +1,10 @@
+﻿@model Condition
+
+<div id="dvStep_@Html.DisplayTextFor(Model => Model.StepNumber)_EmptyConditions" class="@ViewBag.NoConditions">
+    <label class="InterpSubtitle" style="margin-left: 10px;">Conditions(s)</label>
+    <br /><br />
+    <label class="InterpNoValuesText" style="margin-left: 10px;">No Conditions</label>
+    <br /><br />
+    <a href="#" onclick="addNewCondition('dvStep_@Html.DisplayTextFor(model => Model.StepNumber)')" id="add_conditions" style="text-decoration: underline; margin-left: 10px;">Add Conditions</a>
+    <br /><br />
+</div>
